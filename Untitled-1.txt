@@ -1,0 +1,41 @@
+Pitch #1: Realty search site
+
+Functionality:
+    * The user finds the home interface with a form with location, rent/buy options, and a search button
+    * The user is brought to the following page with a list of clickable homes to see with more detail.
+    * The details page shows only the clicked house with pertinant information regarding that house.
+Relevant APIs:
+    1. GetSearchResults API, http://www.zillow.com/howto/api/GetSearchResults.htm
+    2. GetZestimate API, http://www.zillow.com/howto/api/GetZestimate.htm
+    3. GetChart API, http://www.zillow.com/howto/api/GetChart.htm
+    4. GetComps API, http://www.zillow.com/howto/api/GetComps.htm
+***From Github, but not all free: https://gist.github.com/patpohler/36c731113fd113418c0806f62cbb9e30
+
+
+
+
+Pitch #2: Job Board
+
+Functionality:
+    * The user finds the job board interface with a form with title, salary range, and location, and a search button.
+    * The user then sees the list of nearby open positions closely linked to their searched position.
+    * The user clicks on a specific job and sees the details regarding the skills necessary for that job.
+Relevant APIs:
+    1.  Adzuna
+    2.  Careerjet
+    3.  Github Jobs
+    4.  GraphQL Jobs
+    5.  Indeed
+    6.  Jobs2Careers
+    7.  Jooble
+    8.  Juju
+    9.  Open skills
+    10. Reed
+    11. The Muse
+    12. Upwork
+    13. USAJOBS
+    14. ZipRecruiter
+****These are free apis from the Github listings: https://github.com/public-apis/public-apis
+
+
+Pitch #3: Game Site - 
