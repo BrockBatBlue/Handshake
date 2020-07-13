@@ -1,9 +1,9 @@
 ### Schema
 
-CREATE DATABASE cat_db;
-USE cat_db;
+CREATE DATABASE service_db;
+USE service_db;
 
-CREATE TABLE cats
+CREATE TABLE services
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
