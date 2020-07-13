@@ -1,4 +1,4 @@
-Pitch #1: Realty search site
+Scratch Pitch #1: Realty search site
 
 Functionality:
     * The user finds the home interface with a form with location, rent/buy options, and a search button
@@ -11,10 +11,7 @@ Relevant APIs:
     4. GetComps API, http://www.zillow.com/howto/api/GetComps.htm
 ***From Github, but not all free: https://gist.github.com/patpohler/36c731113fd113418c0806f62cbb9e30
 
-
-
-
-Pitch #2: Job Board
+Scratch Pitch #2: Job Board
 
 Functionality:
     * The user finds the job board interface with a form with title, salary range, and location, and a search button.
@@ -37,5 +34,73 @@ Relevant APIs:
     14. ZipRecruiter
 ****These are free apis from the Github listings: https://github.com/public-apis/public-apis
 
+ 
+Pitch #4
+How-To Beauty Blog - Post filter - blog activity burner
 
-Pitch #3: Game Site - 
+* Pitch #5
+Places App - Places of Interest Geolocator location pop-up up on the map
+filter by category/other parameters
+edit/add places
+zip code - links places to the neighborhood
+community empowering***
+
+
+Pitch #6
+Community Blog - Recipes with pictures with feedback feed 
+
+Community application with geolocation and recipes/blogs
+* like pintrest/reddit/facebook
+* management system
+* localize the community?
+* mercado libre, Craig's List
+* home page for recommendations/business posts
+* filter by category/other parameters
+
+Problems to solve - google maps limitations - local businesses are not there
+
+air bnb experiences
+- businesses register experiences (i.e. cooking classes)
+
+recommendations: narrow scope of marketplace to specifice area (carpenters or cooking or wellbeing/health stores)
+
+
+
+
+
+community services - geolocation
+
+Tentative Title
+Your Community 
+A Service Business App
+
+Defining Scope:
+geolocation app with services added by client
+posts to give recommendations/ratings
+
+Functionality:
+Main Page:
+* Header would contain logo, searchbar, and filters
+* Buttons to add new services in area 
+* User would input service/category with option to change location
+* Body would display list of all/filtered services available
+Service Page:
+* Service details, contact numbers, dates/times open
+* Comments and rating section
+* Add image of product/storefront? Possibly add in comments
+
+Frontend/ux ui: Emily
+Floats (javascript): Alan
+Backend: Rodrigo
+Management: Emily
+
+Recommendations:
+Do not modifications after upload
+Do not add user verification
+Do not add an account
+
+boiler plate: Cats activity
+Convert - no handlebars, but sequelize orm
+
+Define Buttons
+Define routes

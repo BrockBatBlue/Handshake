@@ -1,0 +1,52 @@
+.jumbotron {
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(202, 153, 166);
+}
+.logo {
+  align-self: flex-start;
+}
+.searchBars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-control {
+  width: 400px;
+}
+.btn {
+  min-width: 150px;
+  height: 38px;
+  background-color: rgb(17, 153, 108);
+  font-size: medium;
+  font-weight: bolder;
+  padding: auto;
+}
+.addService {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
