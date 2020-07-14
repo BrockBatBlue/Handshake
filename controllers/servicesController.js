@@ -9,7 +9,8 @@ const service = require("../models/service.js");
 router.get("/", function(req, res) {
   service.all(function(data) {
     var hbsObject = {
-      service: data
+      service: data,
+      showSearchBar: true
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
