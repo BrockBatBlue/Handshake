@@ -1,15 +1,39 @@
-{{>jumbotron showSearchBar}}
-<div class="addService">
-  <h2>Add a Service</h2>
-  <br>
-  <form class="create-form">
-    <div class="form-group">
-      <label for="se">Service Title:</label>
-      <input type="text" id="se" name="name">
-      <br>
-      <label for="exampleFormControlTextarea1">Description: </label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+{{>navBar}}
+<div class="content">
+  <h3><a href="">All Services</a></h3>
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="5000">
+        <img
+          src="https://lh3.googleusercontent.com/proxy/9wdcGE3qqDvLBaRWNcnmG6AqT7OhqLdzsD8ZeP1gZDeX_zdcKl1RaXrP8Qq5GfyeJmqPhik5sPPweRnVGCWYEJ8LhDzMAWag6kFs9l1EMoTRvL1ZOGHFg5qHTTn3FsfJqhxN2l6MJDX9uyotefVeR611yVQ"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="serviceName"><a href="">Pet Grooming</a></h2>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="5000">
+        <img
+          src="https://lh3.googleusercontent.com/proxy/knEsx64MtRig-bxVBsykWjD7hMg5hEVzi_5epXaSERAzpkMNelQYb09YNRmObzVVy0gN95qRXM9U0qDaxqNxGUu7fhv_nFGeasseiltBreizB5GHleIeUz6J23aZZRrzfYEjOe-ddKoGXhCxQajj7ZyBzQ"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="serviceName"><a href="">Dry-Cleaning</a></h2>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="5000">
+        <img src="https://www.oneshotplumbing.com/wp-content/uploads/2017/03/plumbing-services.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="serviceName"><a href="">Plumbing Services</a></h2>
+        </div>
+      </div>
     </div>
-    <button type="submit">Add Service</button>
-  </form>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
