@@ -10,7 +10,6 @@ router.get("/", function(req, res) {
   service.all(function(data) {
     var hbsObject = {
       service: data,
-      showSearchBar: true
     };
     console.log(hbsObject);
     res.render("index", hbsObject);

@@ -1,18 +1,23 @@
-.jumbotron {
-  padding: 32px 64px;
+.navBar {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgb(202, 153, 166);
+  background-color: rgb(215, 245, 250);
+  padding-left: 38px;
+  padding-right: 50px;
 }
 .logo {
-  align-self: flex-start;
+  padding: 5px;
+  height: 100px;
+  width: 100px;
 }
-.searchBars {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.navItems {
+  margin-bottom: 0;
+}
+.navItem {
+  padding: 20px;
+  font-size: large;
 }
 .form-control {
   width: 400px;
@@ -24,6 +29,27 @@
   font-size: medium;
   font-weight: bolder;
   padding: auto;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.carousel {
+  width: 80%;
+  height: 60vh;
+}
+.carousel-inner {
+  height: 100%;
+}
+h3 {
+  align-self: flex-start;
+  padding-left: 10%;
+  font-weight: bolder;
+}
+h2 {
+  padding-bottom: 60%;
 }
 .addService {
   display: flex;
