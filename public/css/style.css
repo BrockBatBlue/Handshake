@@ -54,12 +54,12 @@
     padding-bottom: 60%;
   }
   .btn-info:hover {
-      background-color: cornflowerblue;
-      border-color: cornflowerblue;
+      background-color: cornflowerblue !important;
+      border-color: cornflowerblue !important;
   }
   .btn-info {
-      background-color: darkgrey;
-      border-color: darkgrey;
+      background-color: darkgrey !important;
+      border-color: darkgrey !important;
   }
   .btn-info:focus {
       background-color: cornflowerblue !important;
