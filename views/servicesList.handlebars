@@ -1,11 +1,22 @@
 {{!-- Persisting NavBar --}}
 {{>navBar}}
-{{!-- All Services List --}}
-<ul class="list-group list-group-horizontal">
-  <li class="list-group-item">Service</li>
-  <li class="list-group-item"># of STARS</li>
-  <li class="list-group-item">Details</li>
-  <a href="/reviews">
-    <li class="list-group-item">New Review</li>
-  </a>
-</ul>
+<br>
+{{!-- title --}}
+<h4 id="serviceListTitle">Your List of Services</h4>
+<hr style="border:3px solid #f1f1f1">
+{{!-- service list table --}}
+<br>
+<table id="color" class="services">
+  <tr>
+    <th>Service</th>
+    <th># of STARS</th>
+    <th>Details</th>
+    <th>New Review</th>
+  </tr>
+  <tr>
+    <td>Carpentry</td>
+    <td>5</td>
+    <td><a href="/serviceDetails">Details</a></td>
+    <td><a href="/reviews">New Review</a></td>
+  </tr>
+</table>
