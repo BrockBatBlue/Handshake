@@ -1,18 +1,26 @@
 {{!-- Persistent NavBar --}}
 {{>navBar}}
+{{!-- category prompt question --}}
+<br>
+<br>
+<h4 id="creationTitle">Category Creation Station</h4>
 {{!-- Create Category Input --}}
-<form>
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Category">
+<hr style="border:3px solid #f1f1f1">
+<br>
+<div class="categoryForm" id="formSpace">
+  <form>
+    <div class="creationForm">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Category to create">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Product or service">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Input Image">
+        <img src="" alt="">
+      </div>
+      <button type="button" class="btn btn-cat">Create Category</button>
     </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Product">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Input Image">
-      <img src="" alt="">
-    </div>
-    <button type="button" class="btn btn-success">Create Category</button>
-  </div>
-</form>
+  </form>
+</div>

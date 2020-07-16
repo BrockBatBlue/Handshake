@@ -1,9 +1,11 @@
 {{!-- Persistent NavBar --}}
 {{>navBar}}
 {{!-- Dropbox --}}
+<br>
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
+  <button class="btn btn-secondary dropdown-toggle btn-info" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    Service Category
   </button>
   <div class="dropdown-menu" aria-labelledby="Service Business Category">
     <a class="dropdown-item" href="/servicesList">Carpentry</a>
@@ -18,26 +20,30 @@
     <a class="dropdown-item" href="/servicesList">Seamstress/Tailor</a>
   </div>
 </div>
+<br>
+<hr style="border:3px solid #f1f1f1">
+<br>
 {{!-- Business Form Details --}}
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Business Name" aria-label="Business Name">
-</div>
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
-</div>
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name">
-</div>
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Address" aria-label="address">
-</div>
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Business Phone Number" aria-label="Phone Number">
-</div>
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text">Tell us about your business</span>
+<div class="newBusinessForm">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Business Name" aria-label="Business Name">
   </div>
-  <textarea class="form-control" aria-label="Details textarea"></textarea>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Address" aria-label="address">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Business Phone Number" aria-label="Phone Number">
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Tell us about your business</span>
+    </div>
+    <textarea class="form-control" aria-label="Details textarea"></textarea>
+  </div>
 </div>
-
