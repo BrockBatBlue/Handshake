@@ -2,6 +2,7 @@ $(document).ready(function() {
     //Get the value of every input form
     let firstNameInput = $("#firstName");
     let lastNameInput = $("#lastName");
+    let descriptionInput = $("#description");
     let phoneInput = $("#phone-number");
     let zipCodeInput = $("#zip-code");
     let categorySelect = $("#category");
@@ -11,7 +12,7 @@ $(document).ready(function() {
     let submitWorker = (event) => {
         event.preventDefault();
         //All fileds must be full, otherwise don't do anything.
-        if (!firstNameInput.val().trim() || lastNameInput.val().trim() || phoneInput.val().trim() || !zipCodeInput.val().trim().trim() ||
+        if (!firstNameInput.val().trim() || lastNameInput.val().trim() || phoneInput.val().trim()  || descriptionInput.val().trim() || !zipCodeInput.val().trim().trim() ||
         !categorySelect.val()) {
             return
         } else {
@@ -20,6 +21,7 @@ $(document).ready(function() {
                 {
                     firstName: titleInput.val().trim(),
                     lastName: lastNameInput.val().trim(),
+                    description: descriptionInput.val().trim(),
                     phoneNumber: phoneInput.val().trim(),
                     zipCode: zipCodeInput.val().trim(),
                     category: categorySelect.val(),

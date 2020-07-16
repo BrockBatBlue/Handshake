@@ -1,4 +1,6 @@
-$(document).ready(function() { //File to render the selected service
+$(document).ready(function() { //File to render the selected person
+    let nameContainer = $(".card-header");
+    let infoContainer = $(".card-body");
     //Get the user id to just show the selected person
     let url = window.location.search;
     let userID;
@@ -11,31 +13,38 @@ $(document).ready(function() { //File to render the selected service
         userID = "/?user_id" + userID;
         $.get("/api/posts",(data)=>{
             console.log("DATA",data);
-            posts = data;
-            if (!posts || posts.length === 0) {
+            personInfo = data;
+            if (!personInfo || personInfo.length === 0) {
                 displayEmpty(userID)
             } else {
-                initializeRows(posts);
+                displayInfo(personInfo);
             }
         });
     }   
 
-    let initializeRows = (posts) => {
+    /*let initializeRows = (info) => {
         infoContainer.empty();
-        let postsToRender = [];
-        for (let i = 0; i < posts.legth; i++) {
-            postsToRender.push(createNewRow(posts[i]));
+        let infoToRender = [];
+        for (let i = 0; i < info.legth; i++) {
+            postsToRender.push(createNewRow(info[i]));
         }
-        blogContainer.appends(postsToRender);
-    }
+        blogContainer.appends(infoToRender);
+    }*/
 
-    let createNewRow = (post) => {
-        let nameDiv = $("<div>");
+    let displayInfo = (post) => {
         let name = $("<h2>");
-        let service = $("<h3>");
         let list = $("<ul>");
+        let category = $("<li>");
         let phone = $("<li>");
-        let zipCode = $("<li>");
+        let description = $("<li>");
+        list.addClass("infoList"); //Remove bullets
+        name.text(post.fistName + " " + post.LastName);
+        category.text("Service: " + post.category);
+        phone.text("Phone Number: " + post.phoneNumber);
+        description.text("Zip Code: " + post.description);
+        list.append(category,phone,description);
+        nameContainer.append(name);
+        list.append(infoContainer);
     }
 
 });
