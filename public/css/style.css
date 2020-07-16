@@ -1,0 +1,93 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(185, 185, 185);
+    padding-left: 38px;
+    padding-right: 50px;
+  }
+  .logo {
+    padding: 5px;
+    height: 100px;
+  }
+  
+  .navItems {
+    margin-bottom: 0;
+  }
+  .navItem {
+    padding: 20px;
+    font-size: large;
+  }
+  .form-control {
+    width: 400px;
+  }
+  .btn {
+    min-width: 150px;
+    height: 38px;
+    background-color: rgb(17, 153, 108);
+    font-size: medium;
+    font-weight: bolder;
+    padding: auto;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .carousel {
+    width: 80%;
+    height: 60vh;
+  }
+  .carousel-inner {
+    height: 100%;
+  }
+  .selectionTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+  h3 {
+    font-weight: bolder; 
+  }
+  h2 {
+    padding-bottom: 60%;
+  }
+  .btn-info:hover {
+      background-color: cornflowerblue;
+      border-color: cornflowerblue;
+  }
+  .btn-info {
+      background-color: darkgrey;
+      border-color: darkgrey;
+  }
+  .btn-info:focus {
+      background-color: cornflowerblue !important;
+      border-color: cornflowerblue !important;
+      box-shadow: 0 0 0 0.2rem rgb(158, 184, 231) !important;
+  }
+  .addService {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
