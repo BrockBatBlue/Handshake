@@ -8,12 +8,12 @@
 // Requiring our models
 var db = require("../models");
 
-// Routes
+// Routes to post a new service
 // =============================================================
 module.exports = function(app) {
 
   // GET route for getting all of the posts
-  app.get("/api/posts", function(req, res) {
+  app.get("/api/post", function(req, res) {
     var query = {};
     if (req.query.author_id) {
       query.AuthorId = req.query.author_id;
