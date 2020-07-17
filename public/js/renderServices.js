@@ -1,5 +1,5 @@
 $(document).ready(function() { //File to render the selected service
-
+    let table = $("#color");
     let newPerson = $("tbody");
     let errorContainer = $(".person-container");
     //Get the id from the category to just show the selected service
