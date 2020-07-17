@@ -1,13 +1,14 @@
 $(document).ready(function() {
     //Get the value of every input form
-    let firstNameInput = $("#firstName");
-    let lastNameInput = $("#lastName");
+    let categorySelect = $("#selectCategory");
+    let businessName = $("#inputBusinessName") 
+    let firstNameInput = $("#inputFirstName");
+    let lastNameInput = $("#inputLastName");
+    let zipCodeInput = $("#inputZipCode");
     let descriptionInput = $("#description");
-    let phoneInput = $("#phone-number");
-    let zipCodeInput = $("#zip-code");
-    let categorySelect = $("#category");
+    let phoneInput = $("#inputphoneNumber");
 
-    $(document).on('submit', '#worker-form', submitWorker) //id to the form
+    $(document).on('submit', '.newBusinessForm', submitWorker) //id to the form
 
     let submitWorker = (event) => {
         event.preventDefault();
@@ -27,11 +28,12 @@ $(document).ready(function() {
                     category: categorySelect.val(),
                 }
             )
-        }
+        } 
     }
     //Post the new service in the page. 
     let sendPerson = (personInformation) => {
-        $.post("/api/post",personInformation)
+        console.log(personInformation);
+        $.post("/api/service",personInformation)
         .then((console.log("Service Created!")));
     }
 });
