@@ -1,30 +1,61 @@
 {{!-- Persistent NavBar --}}
 {{>navBar}}
 {{!-- Dropbox --}}
+<br>
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
+  <button class="btn btn-secondary dropdown-toggle btn-info" type="button" id="selectCategory" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    Service Category
   </button>
-  <div class="dropdown-menu" aria-labelledby="Service Business Category">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
+  
+  <select name="" id="selectCategory" class="dropdown-menu" aria-labelledby="Service Business Category">
+    <option value="0"class="dropdown-item" href="">Carpentry</option>
+    <option value="1"class="dropdown-item" href="">Carpentry</option>
+    <option value="2"class="dropdown-item" href="">Carpentry</option>
+    <option value="3"class="dropdown-item" href="">Carpentry</option>
+    <option value="4"class="dropdown-item" href="">Carpentry</option>
+    <option value="5"class="dropdown-item" href="">Carpentry</option>
+    <option value="6"class="dropdown-item" href="">Carpentry</option>
+    <option value="7"class="dropdown-item" href="">Carpentry</option>
+    <option value="8"class="dropdown-item" href="">Carpentry</option>
+    <option value="9"class="dropdown-item" href="">Carpentry</option>  
+  </select> 
+  {{!-- <div id="selectCategory" class="dropdown-menu" aria-labelledby="Service Business Category">
+    <a class="dropdown-item" href="">Carpentry</a>
+    <a class="dropdown-item" href="">Computer Repair/IT Service</a>
+    <a class="dropdown-item" href="">Dry-Cleaning</a>
+    <a class="dropdown-item" href="">Electrician</a>
+    <a class="dropdown-item" href="">Locksmith</a>
+    <a class="dropdown-item" href="">Mechanic</a>
+    <a class="dropdown-item" href="">Movers</a>
+    <a class="dropdown-item" href="">Pet Grooming</a>
+    <a class="dropdown-item" href="">Plumbing</a>
+    <a class="dropdown-item" href="">Seamstress/Tailor</a>
+  </div> --}}
 </div>
+<br>
+<hr style="border:3px solid #f1f1f1">
+<br>
 {{!-- Business Form Details --}}
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Business Name" aria-label="Business Name">
-</div>
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Address" aria-label="address">
-</div>
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Business Phone Number" aria-label="Phone Number">
-</div>
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text">Tell us about your business</span>
+<div class="newBusinessForm">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="title" placeholder="Business Name" aria-label="Business Name">
   </div>
-  <textarea class="form-control" aria-label="Details textarea"></textarea>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="description" placeholder="First Name" aria-label="First Name">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="inputZipCode" placeholder="Zip Code" aria-label="zip code">
+  </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Business Phone Number" aria-label="Phone Number">
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Tell us about your business</span>
+    </div>
+    <textarea class="form-control" aria-label="Details textarea"></textarea>
+  </div>
+  <a href="/serviceDetails"><button type="button" id="contactInfo" class="btn btn-info">Add Business</button></a>
 </div>
-
+<script src="../public/js/postService.js"></script>

@@ -1,0 +1,180 @@
+/* partial hbs navbar styles */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(185, 185, 185);
+    padding-left: 38px;
+    padding-right: 50px;
+  }
+  .logo {
+    padding: 5px;
+    height: 100px;
+  }
+  
+  .navItems {
+    margin-bottom: 0;
+  }
+  .navItem {
+    padding: 20px;
+    font-size: large;
+  }
+  /* Body of index hbs styles */
+  .btn {
+    min-width: 150px;
+    height: 38px;
+    font-size: medium;
+    font-weight: bolder;
+    padding: auto;
+  }
+  .btn-info:hover {
+    background-color: cornflowerblue !important;
+    border-color: cornflowerblue !important;
+  }
+  .btn-info {
+    background-color: darkgrey !important;
+    border-color: darkgrey !important;
+  }
+  .btn-info:focus {
+    background-color: cornflowerblue !important;
+    border-color: cornflowerblue !important;
+    box-shadow: 0 0 0 0.2rem rgb(158, 184, 231) !important;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .carousel {
+    width: 80%;
+    height: 60vh;
+  }
+  .carousel-inner {
+    height: 100%;
+  }
+  .selectionTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  h3 {
+    font-weight: bolder; 
+  }
+  h2 {
+    padding-bottom: 60%;
+  }
+  .addService {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* create category hbs styles */
+  h4 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #creationTitle { 
+    margin-left: 11%;
+  }
+  .categoryForm {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #formSpace {
+    margin-left: 10%;
+  }
+  .creationForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: 250px;
+  }
+  .form-control {
+    width: 500px;
+  }
+  .btn-cat {
+    margin-left: 3%;
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: white;
+    width: 150px;
+  }
+  .btn-cat:hover {
+    background-color: cornflowerblue !important;
+    border-color: cornflowerblue !important;
+    box-shadow: 0 0 0 0.2rem rgb(158, 184, 231) !important;
+    color: white;
+  }
+  /* service lists hbs styles */
+  #serviceListTitle {
+    display: flex;
+    justify-content: center;
+  }
+  .services {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    table-layout: fixed;
+  }
+  #color tr:nth-child(even){
+    background-color: #eee;
+  }
+  #color tr:nth-child(odd){
+    background-color: rgb(190, 190, 190);
+  }
+  th {
+    background-color: cornflowerblue;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+  /* service details page styles */
+
+  .checked {
+    color: rgb(255, 217, 0);
+  }
+  .starRating {
+    margin-left: 7%;
+    padding-left: 3%;
+  }
+  .detailsSection {
+    margin-left: 7%;
+    padding-left: 3%;
+  }
+  .vert-line {
+    border-left: 4px solid rgb(251, 230, 36);
+  }
+  .addReviewBtn {
+    min-width: 180px;
+  }
+  /* reviews hbs page styles */
+  .starSection {
+    margin-left: 7%;
+    padding-left: 3%;
+  }
+  #addStars {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .reviewSection {
+    margin-left: 7%;
+    padding-left: 3%;
+  }
+  /* add service hbs page styles */
+  .dropdown {
+    margin-left: 10%;
+  }
+  .newBusinessForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+  }
+  .input-group {
+    margin-left: 20%;
+  }

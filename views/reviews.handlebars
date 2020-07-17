@@ -1,18 +1,31 @@
 {{!-- Persistent NavBar --}}
 {{>navBar}}
 {{!-- Client Star Rates Here --}}
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-
+<br>
+<div class="starSection vert-line">
+  <br>
+  <h4 id="addStars">Add your stars here</h4>
+  <br>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+  <span class="fa fa-star"></span>
+</div>
+<br>
+<hr style="border:3px solid #f1f1f1">
+<br>
 {{!-- Client adds review here --}}
-<form class="review">
+<div class="reviewSection vert-line">
+  <form class="review">
+    <label for="form-control">Add a username</label>
     <input class="form-control" type="text" placeholder="your username">
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Write your review here</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <button type="button" class="btn btn-success">Submit</button>
-</form>
+    <br>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Write your review here</label>
+      <br>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button type="button" class="btn btn-cat">Submit Review</button>
+  </form>
+</div>

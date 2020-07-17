@@ -11,15 +11,19 @@ module.exports = function(sequelize, DataTypes) {
       Service.hasMany(models.Reviews, {
         onDelete: "cascade"
       });
-      Service.hasOne(models.Categories, {
-        onDelete: "cascade"
+  
+      Service.belongsTo(models.Categories, {
+        foreignKey: {
+          allowNull: false
+        }
       });
-
+  
       Service.belongsTo(models.User, {
         foreignKey: {
           allowNull: false
         }
       });
+      
     };
   
     return Service;
