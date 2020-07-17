@@ -1,0 +1,28 @@
+{
+    "name":"Rodrigo",
+    "lastName":"Rosas",
+    "email":"rodrigo@mail.com",
+    "password":"sisi"
+}
+
+{
+    "title":"Rodrigo Carpented",
+    "description":"Carpenter",
+    "contactInfo":"Se contacta a traves de su telefono",
+    "phoneNumber":"5512345678",
+    "zipCode":"01210",
+    "UserId":"1",
+    "CategoryId":"1"
+}
+
+{
+    "categoryName":"Carpenter"
+}
+
+{
+    "title":"Muy buen servicio",
+    "text":"Hizo un mueble para televisión y quedó muy bien, recomendable",
+    "rating":"5",
+    "UserId":"1",
+    "ServiceId":"1"
+}
