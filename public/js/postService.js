@@ -20,7 +20,7 @@ $(document).ready(function() {
         //All fileds must be full, otherwise don't do anything.
         if (!titleInput.val().trim() || contactInfoInput.val().trim() || !phoneInput.val().trim()  || !descriptionInput.val().trim() || !zipCodeInput.val().trim().trim() ||
         !categorySelect.val() || !contactInfoInput.val().trim() || !userSelect.val()) {
-            return
+            return "No info"
         } else {
             //An id will be created for this person
             sendPerson(

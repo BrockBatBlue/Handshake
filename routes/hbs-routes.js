@@ -5,6 +5,9 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+let db = require("../models/index.js");
+//var router = express.Router();
+var express = require("express");
 
 // Routes
 // =============================================================
@@ -14,7 +17,14 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.render("index");
+    db.Categories.findAll({}).then((data)=>{
+      //console.log("LIST OF CATEGORIES",data);
+      console.log("LIST OF CATEGORIES",data);
+      console.log("LIST OF CATEGORIES",data.dataValues);
+      console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);
+      //console.log(data[0].Categories);
+      res.render("index", {data});
+    });
   });
 
   // add service route goes to the addService template
