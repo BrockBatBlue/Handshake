@@ -1,27 +1,33 @@
 {{>navBar}}
 <br>
 <div class="selectionTop">
-  <div class="dropdown selectService">
+  <div class="dropdown selectService" id="selectCategory">
     <button class="btn btn-info dropdown-toggle" type="button" id="selectServiceButton" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false">
       Select Service
     </button>
+    
+    <!--{{data}}-->
     <div class="dropdown-menu" aria-labelledby="Service Business Category">
-      <a class="dropdown-item" href="/servicesList">Carpentry</a>
-      <a class="dropdown-item" href="/servicesList">Computer Repair/IT Service</a>
-      <a class="dropdown-item" href="/servicesList">Dry-Cleaning</a>
-      <a class="dropdown-item" href="/servicesList">Electrician</a>
-      <a class="dropdown-item" href="/servicesList">Locksmith</a>
-      <a class="dropdown-item" href="/servicesList">Mechanic</a>
-      <a class="dropdown-item" href="/servicesList">Movers</a>
-      <a class="dropdown-item" href="/servicesList">Pet Grooming</a>
-      <a class="dropdown-item" href="/servicesList">Plumbing</a>
-      <a class="dropdown-item" href="/servicesList">Seamstress/Tailor</a>
+      {{#each data}}
+      <a class="dropdown-item" data-id={{dataValues.id}} >{{dataValues.categoryName}}</a>
+      {{/each}}
+      <!--<a class="dropdown-item" data-id="1">Carpentry</a>
+      <a class="dropdown-item" data-id="2" >Computer Repair/IT Service</a>
+      <a class="dropdown-item" data-id="3" >Dry-Cleaning</a>
+      <a class="dropdown-item" data-id="4" >Electrician</a>
+      <a class="dropdown-item" data-id="5" >Locksmith</a>
+      <a class="dropdown-item" data-id="6" >Mechanic</a>
+      <a class="dropdown-item" data-id="7" >Movers</a>
+      <a class="dropdown-item" data-id="8" >Pet Grooming</a>
+      <a class="dropdown-item" data-id="9" >Plumbing</a>
+      <a class="dropdown-item" data-id="10">Seamstress/Tailor</a>-->
     </div>
   </div>
-  <h3><a href="/servicesList">All Services</a></h3>
+  <h3><a href="/service">All Services</a></h3>
 </div>
 <br>
+
 <div class="content">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">

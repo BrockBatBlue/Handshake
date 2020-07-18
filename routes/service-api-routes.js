@@ -5,6 +5,19 @@ module.exports = function(app) {
     db.Service.findAll({
       include: [db.User,db.Categories,db.Reviews]
     }).then(function(dbService) {
+      //console.log(dbService);
+      res.json(dbService);
+    });
+  });
+
+  app.get("/api/service/:id", function(req, res) {
+    db.Service.findAll({
+      where: {
+        id: req.params.id
+      },
+      include: [db.User,db.Categories,db.Reviews]
+    }).then(function(dbService) {
+      console.log(dbService);
       res.json(dbService);
     });
   });
