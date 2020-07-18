@@ -8,33 +8,12 @@
     Service Category
   </button>-->
   
-<<<<<<< HEAD
-    <div class="dropdown-menu" aria-labelledby="Service Business Category">
-      {{#each data}}
-      <a class="dropdown-item" data-id={{dataValues.id}} >{{dataValues.categoryName}}</a>
-      {{/each}}
-    </div>
-  {{!-- <div id="selectCategory" class="dropdown-menu" aria-labelledby="Service Business Category">
-    <a class="dropdown-item" href="">Carpentry</a>
-    <a class="dropdown-item" href="">Computer Repair/IT Service</a>
-    <a class="dropdown-item" href="">Dry-Cleaning</a>
-    <a class="dropdown-item" href="">Electrician</a>
-    <a class="dropdown-item" href="">Locksmith</a>
-    <a class="dropdown-item" href="">Mechanic</a>
-    <a class="dropdown-item" href="">Movers</a>
-    <a class="dropdown-item" href="">Pet Grooming</a>
-    <a class="dropdown-item" href="">Plumbing</a>
-    <a class="dropdown-item" href="">Seamstress/Tailor</a>
-  </div> --}}
-</div>
-=======
     <select id="selectCategory" aria-labelledby="Service Business Category">
       {{#each data}}
       <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.categoryName}}</option>
       {{/each}}
     </select>
 <!--</div>-->
->>>>>>> cc8bb449f9c304c0e37242ae3f3547b589ffdfab
 <br>
 <hr style="border:3px solid #f1f1f1">
 <br>
@@ -47,7 +26,7 @@
   </button> --}}
     <select id="userSelect" class="dropdown" aria-labelledby="Service Business Category">
       {{#each user}}
-      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.name}}</option>
+      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
       {{/each}}
     </select>
     {{!-- </div>

@@ -31,16 +31,6 @@ module.exports = function(app) {
   app.get("/addService", function(req, res) {
     db.Categories.findAll({}).then((data)=>{
       //console.log("LIST OF CATEGORIES",data);
-<<<<<<< HEAD
-      console.log("LIST OF CATEGORIES",data);
-      console.log("LIST OF CATEGORIES",data.dataValues);
-      console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);
-      //console.log(data[0].Categories);
-    res.render("addService",{data});
-  });
-});
-
-=======
       /*console.log("LIST OF CATEGORIES",data);
       console.log("LIST OF CATEGORIES",data.dataValues);
       console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);*/
@@ -58,7 +48,6 @@ module.exports = function(app) {
     });
     });
 });
->>>>>>> cc8bb449f9c304c0e37242ae3f3547b589ffdfab
 
   // create category route goes to the createCategory handlebar template
   app.get("/createCategory", function(req, res) {

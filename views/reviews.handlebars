@@ -16,24 +16,23 @@
 <hr style="border:3px solid #f1f1f1">
 <br>
 {{!-- Client adds review here --}}
-<div class="reviewSection vert-line">
-  <form class="review">
-    <label for="form-control">Add a username</label>
     <select id="userSelectRev" class="dropdown" aria-labelledby="Service Business Category">
       {{#each userRev}}
-      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.name}}</option>
+      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
       {{/each}}
     </select>
+<div class="reviewSection vert-line">
+  <form class="review">
     <br>
     <div class="form-group">
       {{!-- <label for="subject"> Review Title: <label> --}}
-      <input type="text" id="subject">
+      <input type="text" id="subject" placeholder="Review Title">  <br>
       <label for="comment">Write your review here</label>
       <br>
       <textarea class="form-control" id="comment" rows="3"></textarea>
       {{!-- <label for="rating"> Rating value: <label> --}}
-      <input id="rating" type="text">
+      <input id="rating" type="text" placeholder="Review Rating">
     </div>
-    <button type="button" class="btn btn-cat">Submit Review</button>
+    <button type="submit" class="btn btn-cat" id="reviewSubmit">Submit Review</button>
   </form>
 </div>
