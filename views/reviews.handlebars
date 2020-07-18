@@ -19,12 +19,20 @@
 <div class="reviewSection vert-line">
   <form class="review">
     <label for="form-control">Add a username</label>
-    <input class="form-control" type="text" placeholder="your username">
+    <select id="userSelectRev" class="dropdown" aria-labelledby="Service Business Category">
+      {{#each userRev}}
+      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.name}}</option>
+      {{/each}}
+    </select>
     <br>
     <div class="form-group">
-      <label for="exampleFormControlTextarea1">Write your review here</label>
+      {{!-- <label for="subject"> Review Title: <label> --}}
+      <input type="text" id="subject">
+      <label for="comment">Write your review here</label>
       <br>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea class="form-control" id="comment" rows="3"></textarea>
+      {{!-- <label for="rating"> Rating value: <label> --}}
+      <input id="rating" type="text">
     </div>
     <button type="button" class="btn btn-cat">Submit Review</button>
   </form>
