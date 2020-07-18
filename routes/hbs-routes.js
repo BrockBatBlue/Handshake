@@ -5,6 +5,9 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+let db = require("../models/index.js");
+//var router = express.Router();
+var express = require("express");
 
 // Routes
 // =============================================================
@@ -14,13 +17,28 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.render("index");
+    db.Categories.findAll({}).then((data)=>{
+      //console.log("LIST OF CATEGORIES",data);
+      console.log("LIST OF CATEGORIES",data);
+      console.log("LIST OF CATEGORIES",data.dataValues);
+      console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);
+      //console.log(data[0].Categories);
+      res.render("index", {data});
+    });
   });
 
   // add service route goes to the addService template
   app.get("/addService", function(req, res) {
-    res.render("addService");
+    db.Categories.findAll({}).then((data)=>{
+      //console.log("LIST OF CATEGORIES",data);
+      console.log("LIST OF CATEGORIES",data);
+      console.log("LIST OF CATEGORIES",data.dataValues);
+      console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);
+      //console.log(data[0].Categories);
+    res.render("addService",{data});
   });
+});
+
 
   // create category route goes to the createCategory handlebar template
   app.get("/createCategory", function(req, res) {
@@ -39,5 +57,4 @@ module.exports = function(app) {
   app.get("/servicesList", function(req, res) {
     res.render("servicesList");
   });
-
-};
+}

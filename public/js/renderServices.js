@@ -1,57 +1,68 @@
 $(document).ready(function() { //File to render the selected service
-
+    //let table = $("#servicesTable");
     let newPerson = $("tbody");
     let errorContainer = $(".person-container");
-    //Get the id from the category to just show the selected service
-    //Example of route for this page '/service?service_id=' + id of the service
-    let url = window.location.search;
-    let serviceID;
-    if (url.indexOf("?service_id=") !== -1) {
-        serviceID = url.split("=")[1];
-        getPosts(serviceID);
-    }
 
-    let getPosts = (serviceID) => {             //Foreign Key --> refer to category (carpentry, plumbing, etc)
-        serviceID = "/?service_id=" + serviceID;
-        $.get("/api/service" + serviceID,(data)=>{ //
+    let getPosts = (categoryID) => {             //Foreign Key --> refer to category (carpentry, plumbing, etc)
+        //categoryID = "/?service_id=" + categoryID;
+        $.get("/api/category/" + categoryID,(data)=>{ //
             console.log("DATA",data);
             posts = data;
+            console.log(posts);
             if (!posts || posts.length === 0) {
-                displayEmpty(serviceID);
+                displayEmpty(categoryID);
             } else {
                 initializeRows(posts);
             };
         });
-    };   
+    };
+    //Get the id from the category to just show the selected service
+    //Example of route for this page '/service?service_id=' + id of the service
+    let url = window.location.search;
+    let categoryID;
+    if (url.indexOf("?category_id=") !== -1) {
+        categoryID = url.split("=")[1];
+        getPosts(categoryID);
+    }   
 
     let initializeRows = (posts) => {
-        let postsToRender = [];
-        for (let i = 0; i < posts.length; i++) {
-            postsToRender.push(createPersonRow(posts[i]));
+        //console.log(posts.Services[0].title);
+        let categoryArray = posts.Services;
+        //let postsToRender = [];
+        for (let i = 0; i < categoryArray.length; i++) {
+            //postsToRender.push(createPersonRow(posts[i]));
+            let newTr = $("<tr>");      //New line
+            newTr.data("data",posts);
+            newTr.append("<td>" + categoryArray[i].title + "</td>");
+            newTr.append("<td>" + categoryArray[i].phoneNumber + "</td>");
+            newTr.append("<td><a href='serviceDetails?service_id=" + categoryArray[i].id + "'>Details</td>");
+            newTr.append("<td><a href='reviews?service_id=" + categoryArray[i].id + "'>Write a review</td>");
+            $("tbody").append(newTr);
         };
-        renderServices(postsToRender);
+        //renderServices(postsToRender);
     };
 
-    let renderServices = (rows) => {
+    /*let renderServices = (rows) => {
+        console.log(rows);
         //authorList.children().not(":last").remove();
         //authorContainer.children(".alert").remove();
         if (rows.length) {
           console.log(rows);
           newPerson.prepend(rows); //Appen in the body of the table
         }  
-    } 
+    } */
     
     //Create a new line in the table for each person
-    let createPersonRow = (post) => {
+    /*let createPersonRow = (post) => {
+        console.log(post);
         let newTr = $("<tr>");      //New line
-        newTr.data("data",data);
-        newTr.append("<td>" + post.firstName + "</td>");
-        newTr.append("<td>" + post.lastName + "</td>");
-        newTr.append("<td>" + phoneNumber + "</td>");
-        newTr.append("<td>" + zipCode + "</td>");
-        newTr.append("<td><a href='/services?user_id=" + post.id + "'>See in Detail</a></td>");
+        newTr.data("data",post);
+        newTr.append("<td>" + post.title + "</td>");
+        newTr.append("<td>" + post.phoneNumber + "</td>");
+        newTr.append("<td><a href='serviceDetails?service_id=" + post.id + "'>Details</td>");
+        newTr.append("<td><a href='reviews?service_id=" + post.id + "'>Write a review</td>");
         return newTr
-    }
+    }*/
 
     //Display this message if there is no persons offering this service.
     let displayEmpty = () => {

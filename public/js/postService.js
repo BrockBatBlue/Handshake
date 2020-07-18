@@ -6,18 +6,21 @@ $(document).ready(function() {
     let phoneInput = $("#inputphoneNumber");
     let zipCodeInput = $("#inputZipCode");
     let categorySelect = $("#selectCategory");
-    let firstNameInput = $("#inputFirstName");
-    let lastNameInput = $("#inputLastName");
     let userSelect = $("#userSelect");
 
     $(document).on('submit', '.newBusinessForm', submitWorker) //id to the form
+     
+    categorySelect.on("change",function(){
+        console.debug("value changed");
+    });
+
 
     let submitWorker = (event) => {
         event.preventDefault();
         //All fileds must be full, otherwise don't do anything.
-        if (!firstNameInput.val().trim() || lastNameInput.val().trim() || phoneInput.val().trim()  || descriptionInput.val().trim() || !zipCodeInput.val().trim().trim() ||
-        !categorySelect.val()) {
-            return
+        if (!titleInput.val().trim() || contactInfoInput.val().trim() || !phoneInput.val().trim()  || !descriptionInput.val().trim() || !zipCodeInput.val().trim().trim() ||
+        !categorySelect.val() || !contactInfoInput.val().trim() || !userSelect.val()) {
+            return "No info"
         } else {
             //An id will be created for this person
             sendPerson(
@@ -26,11 +29,9 @@ $(document).ready(function() {
                     description: descriptionInput.val().trim(),
                     contactInfo = contactInfoInput.val().trim(),
                     phoneNumber: phoneInput.val().trim(),
-                    firstName: titleInput.val().trim(),
-                    lastName: lastNameInput.val().trim(),
                     zipCode: zipCodeInput.val().trim(),
                     category: categorySelect.val(),
-                    category: ca.val(),
+                    category: userSelect.val(),
                 }
             )
         } 

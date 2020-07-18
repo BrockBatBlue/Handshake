@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 User
+=======
+>>>>>>> 8ffad09199c8bd50305728668a449cbe63de072e
 {
     "name":"Rodrigo",
     "lastName":"Rosas",
@@ -6,12 +9,15 @@ User
     "password":"sisi"
 }
 
+<<<<<<< HEAD
 Category
 {
     "categoryName":"Carpenter"
 }
 
 Service
+=======
+>>>>>>> 8ffad09199c8bd50305728668a449cbe63de072e
 {
     "title":"Rodrigo Carpented",
     "description":"Carpenter",
@@ -22,7 +28,14 @@ Service
     "CategoryId":"1"
 }
 
+<<<<<<< HEAD
 Review
+=======
+{
+    "categoryName":"Carpenter"
+}
+
+>>>>>>> 8ffad09199c8bd50305728668a449cbe63de072e
 {
     "title":"Muy buen servicio",
     "text":"Hizo un mueble para televisión y quedó muy bien, recomendable",
