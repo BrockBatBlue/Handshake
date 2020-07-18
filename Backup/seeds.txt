@@ -1,8 +1,8 @@
 {
+    "userName":"rodrigoRova",
     "name":"Rodrigo",
     "lastName":"Rosas",
-    "email":"rodrigo@mail.com",
-    "password":"sisi"
+    "email":"rodrigo@mail.com"
 }
 
 {

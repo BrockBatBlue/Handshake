@@ -3,15 +3,32 @@ $(document).ready(function() {
     let subjectInput = $("#subject");
     let commentInput = $("#comment");
     let ratingSelect = $("#rating");
-    let userSelectRev = $("userSelectRev");
+    let userSelectRev = $("#userSelectRev");
 
-    $("#comment").on('submit',handleFormSubmit)        //id for review form
+    //Show only the reviwes related to that person
+    // let getId = () => {
+    //     let url = window.location.search;
+    //     let personID;
+    //     if (url.indexOf("?personID") !== -1) {
+    //         personID = url.split("=")[1];
+    //         return personID;
+    //     }
+    // }
 
     //Create a new review
-    let handleFormSubmit = () => {
+    let handleFormSubmit = (event) => {
         // if (!subjectInput.val().trim() || !commentInput.val().trim() || !ratingSelect.val()) {
         //     return 
         // }
+        event.preventDefault();
+
+        let url = window.location.search;
+        let serviceID;
+        if (url.indexOf("?service_id=") !== -1) {
+            serviceID = url.split("=")[1];
+        }
+        console.log("Service ID: ", serviceID)
+        console.log("User ID:", userSelectRev.val())
 
         let newReview = {
 
@@ -19,27 +36,18 @@ $(document).ready(function() {
             text: commentInput.val().trim(),
             rating: ratingSelect.val(),
             UserId: userSelectRev.val(),
-            ServiceId: getId
+            ServiceId: serviceID
         }
 
         submitReview(newReview);
     }
+
+    $("#reviewSubmit").on('click',handleFormSubmit)        //id for review form
 
     //Post the new review
     let submitReview = (post) => {
         $.post("/api/reviews",post,() => {
             location.reload();
         });  
-    };
-
-    //Show only the reviwes related to that person
-    let getId = () => {
-        let url = window.location.search;
-        let personID;
-        if (url.indexOf("?personID") !== -1) {
-            personID = url.split("=")[1];
-            return personID;
-        }
-    }
-    
+    };    
 });
