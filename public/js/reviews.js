@@ -3,19 +3,23 @@ $(document).ready(function() {
     let subjectInput = $("#subject");
     let commentInput = $("#comment");
     let ratingSelect = $("#rating");
+    let userSelectRev = $("userSelectRev");
 
     $("#comment").on('submit',handleFormSubmit)        //id for review form
 
     //Create a new review
     let handleFormSubmit = () => {
-        if (!subjectInput.val().trim() || !commentInput.val().trim() || !ratingSelect.val()) {
-            return 
-        }
+        // if (!subjectInput.val().trim() || !commentInput.val().trim() || !ratingSelect.val()) {
+        //     return 
+        // }
 
         let newReview = {
-            subject: subjectInput.val().trim(),
-            comment: commentInput.val().trim(),
-            rating: ratingSelect.val()
+
+            title: subjectInput.val().trim(),
+            text: commentInput.val().trim(),
+            rating: ratingSelect.val(),
+            UserId: userSelectRev.val(),
+            ServiceId: getId
         }
 
         submitReview(newReview);
@@ -29,11 +33,13 @@ $(document).ready(function() {
     };
 
     //Show only the reviwes related to that person
-    let url = window.location.search;
-    let personID;
-    if (url.indexOf("?personID") !== -1) {
-        personID = url.split("=")[1];
-        getReviews(personID);
+    let getId = () => {
+        let url = window.location.search;
+        let personID;
+        if (url.indexOf("?personID") !== -1) {
+            personID = url.split("=")[1];
+            return personID;
+        }
     }
     
 });
