@@ -2,41 +2,37 @@
 {{>navBar}}
 {{!-- Dropbox --}}
 <br>
-<div class="dropdown">
+<!--<div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle btn-info" type="button" id="selectCategory" data-toggle="dropdown"
     aria-haspopup="true" aria-expanded="false">
     Service Category
-  </button>
+  </button>-->
   
-  <select name="" id="selectCategory" class="dropdown-menu" aria-labelledby="Service Business Category">
-    <option value="0"class="dropdown-item" href="">Carpentry</option>
-    <option value="1"class="dropdown-item" href="">Carpentry</option>
-    <option value="2"class="dropdown-item" href="">Carpentry</option>
-    <option value="3"class="dropdown-item" href="">Carpentry</option>
-    <option value="4"class="dropdown-item" href="">Carpentry</option>
-    <option value="5"class="dropdown-item" href="">Carpentry</option>
-    <option value="6"class="dropdown-item" href="">Carpentry</option>
-    <option value="7"class="dropdown-item" href="">Carpentry</option>
-    <option value="8"class="dropdown-item" href="">Carpentry</option>
-    <option value="9"class="dropdown-item" href="">Carpentry</option>  
-  </select> 
-  {{!-- <div id="selectCategory" class="dropdown-menu" aria-labelledby="Service Business Category">
-    <a class="dropdown-item" href="">Carpentry</a>
-    <a class="dropdown-item" href="">Computer Repair/IT Service</a>
-    <a class="dropdown-item" href="">Dry-Cleaning</a>
-    <a class="dropdown-item" href="">Electrician</a>
-    <a class="dropdown-item" href="">Locksmith</a>
-    <a class="dropdown-item" href="">Mechanic</a>
-    <a class="dropdown-item" href="">Movers</a>
-    <a class="dropdown-item" href="">Pet Grooming</a>
-    <a class="dropdown-item" href="">Plumbing</a>
-    <a class="dropdown-item" href="">Seamstress/Tailor</a>
-  </div> --}}
-</div>
+    <select id="selectCategory" aria-labelledby="Service Business Category">
+      {{#each data}}
+      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.categoryName}}</option>
+      {{/each}}
+    </select>
+<!--</div>-->
 <br>
 <hr style="border:3px solid #f1f1f1">
 <br>
 {{!-- Business Form Details --}}
+
+{{!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle btn-info" type="button" id="selectCategory" data-toggle="dropdown"
+    aria-haspopup="true" aria-expanded="false">
+    User
+  </button> --}}
+    <select id="userSelect" class="dropdown" aria-labelledby="Service Business Category">
+      {{#each user}}
+      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.name}}</option>
+      {{/each}}
+    </select>
+    {{!-- </div>
+</div> --}}
+
+
 <div class="newBusinessForm">
   <div class="input-group mb-3">
     <input type="text" class="form-control" id="title" placeholder="Business Name" aria-label="Business Name">
@@ -54,8 +50,7 @@
     <div class="input-group-prepend">
       <span class="input-group-text">Tell us about your business</span>
     </div>
-    <textarea class="form-control" aria-label="Details textarea"></textarea>
+    <textarea id="info" class="form-control" aria-label="Details textarea"></textarea>
   </div>
   <button type="submit" id="contactInfo" class="btn btn-info">Add Business</button>
 </div>
-<script src="../public/js/postService.js"></script>

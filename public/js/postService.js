@@ -2,44 +2,49 @@ $(document).ready(function() {
     //Get the value of every input form
     let titleInput = $("#title"); 
     let descriptionInput = $("#description");
-    let contactInfoInput = $("#contactInfo");
-    let phoneInput = $("#inputphoneNumber");
+    let contactInfoInput = $("#info");
+    let phoneInput = $("#inputPhoneNumber");
     let zipCodeInput = $("#inputZipCode");
     let categorySelect = $("#selectCategory");
     let userSelect = $("#userSelect");
-
-    $(document).on('submit', '.newBusinessForm', submitWorker) //id to the form
      
-    categorySelect.on("change",function(){
+    /*categorySelect.on("change",function(){
         console.debug("value changed");
-    });
+    });*/
 
 
     let submitWorker = (event) => {
         event.preventDefault();
+        console.log(categorySelect);
         //All fileds must be full, otherwise don't do anything.
-        if (!titleInput.val().trim() || contactInfoInput.val().trim() || !phoneInput.val().trim()  || !descriptionInput.val().trim() || !zipCodeInput.val().trim().trim() ||
-        !categorySelect.val() || !contactInfoInput.val().trim() || !userSelect.val()) {
+        /*if (!titleInput.val().trim() || contactInfoInput.val().trim() || !phoneInput.val().trim()  || !descriptionInput.val().trim() || !zipCodeInput.val().trim().trim() ||
+        !categorySelect.val() || !contactInfoInput.val().trim()) {
             return "No info"
-        } else {
+        } else {*/
             //An id will be created for this person
             sendPerson(
                 {
-                    title = titleInput.val().trim(),
+                    title: titleInput.val().trim(),
                     description: descriptionInput.val().trim(),
-                    contactInfo = contactInfoInput.val().trim(),
-                    phoneNumber: phoneInput.val().trim(),
-                    zipCode: zipCodeInput.val().trim(),
-                    category: categorySelect.val(),
-                    category: userSelect.val(),
+                    contactInfo: contactInfoInput.val().trim(),
+                    phoneNumber: phoneInput.val(),
+                    zipCode: zipCodeInput.val(),
+                    CategoryId: categorySelect.val(),
+                    UserId: userSelect.val()
                 }
             )
-        } 
+        //}
     }
+    categorySelect.on('change',function(){
+        console.log(categorySelect.val());
+    })
+    $("#contactInfo").on('click', submitWorker) //id to the form
+
+    console.log("Hola");
     //Post the new service in the page. 
     let sendPerson = (personInformation) => {
         console.log(personInformation);
         $.post("/api/service",personInformation)
-        .then((console.log("Service Created!")));
+        .then((console.log("Service Created! :", personInformation)));
     }
 });
