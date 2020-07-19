@@ -1,20 +1,23 @@
 {{>navBar}}
 <br>
-<div class="selectionTop">
+<!--<div class="selectionTop">
   <div class="dropdown selectService" id="selectCategory">
     <button class="btn btn-info dropdown-toggle" type="button" id="selectServiceButton" data-toggle="dropdown"
       aria-haspopup="true" aria-expanded="false">
       Select Service
-    </button>
-    
-    <div class="dropdown-menu" aria-labelledby="Service Business Category">
-      {{#each data}}
-      <a class="dropdown-item" data-id={{dataValues.id}} >{{dataValues.categoryName}}</a>
-      {{/each}}
+    </button>-->
+    <div>
+      <select id="sendId" class="dropdown" aria-labelledby="Service Business Category">
+        <option class="dropdown-item"></option>
+        {{#each data}}
+        <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.categoryName}}</option>
+        {{/each}}
+      </select>
+      <button id="goButton"><a id="viewService"><i class="fas fa-arrow-right"></i></a></button>
     </div>
-  </div>
+  <!--</div>
+</div>-->
   <h3><a href="/servicesList">All Services</a></h3>
-</div>
 <br>
 
 <div class="content">

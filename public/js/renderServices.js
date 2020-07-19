@@ -16,14 +16,48 @@ $(document).ready(function() { //File to render the selected service
             };
         });
     };
+
+    let renderAll = () => {
+        console.log("HOLA");
+        $.get("/api/service",(data)=>{ //
+            console.log("DATA",data);
+            posts = data;
+            console.log(posts);
+            if (!posts || posts.length === 0) {
+                displayEmpty();
+            } else {
+                initializeRows2(posts);
+            };
+        });
+    }
+    
     //Get the id from the category to just show the selected service
     //Example of route for this page '/service?service_id=' + id of the service
     let url = window.location.search;
     let categoryID;
     if (url.indexOf("?category_id=") !== -1) {
         categoryID = url.split("=")[1];
-        getPosts(categoryID);
-    }   
+        if (categoryID > 0) {
+            getPosts(categoryID);
+        } 
+    } else {
+        renderAll();
+    }
+
+    let initializeRows2 = (posts) => {
+        console.log(posts.length);
+        console.log(posts[0].title);
+        for (let i = 0; i <posts.length; i++) {
+            let newTr = $("<tr>");      //New line
+            newTr.data("data",posts);
+            newTr.append("<td>" + posts[i].title + "</td>");
+            newTr.append("<td>" + posts[i].phoneNumber + "</td>");
+            newTr.append("<td><a href='serviceDetails?service_id=" + posts[i].id + "'>Details</td>");
+            newTr.append("<td><a href='reviews?service_id=" + posts[i].id + "'>Write a review</td>");
+            $("tbody").append(newTr);
+            console.log(newTr);
+        }
+    }
 
     let initializeRows = (posts) => {
         //console.log(posts.Services[0].title);
