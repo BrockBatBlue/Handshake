@@ -20,8 +20,8 @@ module.exports = function(app) {
     db.Categories.findAll({}).then((data)=>{
       //console.log("LIST OF CATEGORIES",data);
       console.log("LIST OF CATEGORIES",data);
-      console.log("LIST OF CATEGORIES",data.dataValues);
-      console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);
+      //console.log("LIST OF CATEGORIES",data.dataValues);
+      //console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);
       //console.log(data[0].Categories);
       res.render("index", {data});
     });
@@ -41,8 +41,8 @@ module.exports = function(app) {
         //console.log("LIST OF CATEGORIES",data);
         console.log("Dentro de lista de usuarios");
         console.log("LIST OF USERS",user);
-        console.log("LIST OF CATEGORIES",user.dataValues);
-        console.log("LIST OF CATEGORIES",user[0].dataValues.categoryName);
+        //console.log("LIST OF CATEGORIES",user.dataValues);
+        //console.log("LIST OF CATEGORIES",user[0].dataValues.categoryName);
         //console.log(data[0].Categories);
       res.render("addService",{user,data});
     });
@@ -59,9 +59,9 @@ module.exports = function(app) {
     db.User.findAll({}).then((userRev)=>{
       //console.log("LIST OF CATEGORIES",data);
       console.log("Dentro de lista de usuarios");
-      console.log("LIST OF USERS",userRev);
-      console.log("LIST OF CATEGORIES",userRev.dataValues);
-      console.log("LIST OF CATEGORIES",userRev[0].dataValues.categoryName);
+      //console.log("LIST OF USERS",userRev);
+      //console.log("LIST OF CATEGORIES",userRev.dataValues);
+      //console.log("LIST OF CATEGORIES",userRev[0].dataValues.categoryName);
       //console.log(data[0].Categories);
     //res.render("addService",{user,data});
     res.render("reviews",{userRev});

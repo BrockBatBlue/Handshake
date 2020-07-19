@@ -3,6 +3,8 @@ let apiKEY = "AIzaSyANEf3BZpRJiv5Izb20X-Zwc7wXYrEus5Y";
 
 $(document).ready(function(){
 
+    let categorySelect = $("#sendId");
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position){
             console.log(position);
@@ -31,12 +33,18 @@ $(document).ready(function(){
         })
     }
 
-    $(".dropdown-item").on('click',function(event){
+    /*$(".dropdown").on('change',function(event){
         event.preventDefault();
         //console.log(event.target);
         //console.log($(this).data());
-        let category_id = $(this).data("id");
+        let category_id = $(this).val();
         console.log(category_id);
         $(this).attr('href',"servicesList?category_id=" + category_id);
+    })*/
+
+    categorySelect.on('change',function(){
+        console.log(categorySelect.val());
+        let category_id = categorySelect.val();
+        $("#viewService").attr('href',"servicesList?category_id=" + category_id);
     })
 });

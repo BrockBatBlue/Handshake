@@ -35,9 +35,9 @@ $(document).ready(function() {
             )
         //}
     }
-    categorySelect.on('change',function(){
+    /*categorySelect.on('change',function(){
         console.log(categorySelect.val());
-    })
+    })*/
     $("#contactInfo").on('click', submitWorker) //id to the form
 
     console.log("Hola");

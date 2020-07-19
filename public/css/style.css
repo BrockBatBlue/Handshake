@@ -113,11 +113,17 @@
     display: flex;
     justify-content: center;
   }
+
+  .table-container {
+    text-align: center;
+  }
+
   .services {
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
-    width: 100%;
-    table-layout: fixed;
+    width: 80%;
+    /*table-layout: fixed;*/
+    text-align: center;
   }
   #color tr:nth-child(even){
     background-color: #eee;
@@ -177,4 +183,14 @@
   }
   .input-group {
     margin-left: 20%;
+  }
+
+  #sendId{
+    border-radius: 0.3em;
+  }
+
+  #goButton {
+    border-radius: 0.3em;
+    border: solid 1px black;
+    background-color: white;
   }
