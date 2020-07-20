@@ -2,9 +2,9 @@ $(document).ready(function() {
     //Get the value of every input form
     let titleInput = $("#title"); 
     let descriptionInput = $("#description");
-    let contactInfoInput = $("#info");
-    let phoneInput = $("#inputPhoneNumber");
-    let zipCodeInput = $("#inputZipCode");
+    let contactInfoInput = $("#contactInfo");
+    let phoneInput = $("#phoneNumber");
+    let zipCodeInput = $("#zipCode");
     let categorySelect = $("#selectCategory");
     let userSelect = $("#userSelect");
      
@@ -38,7 +38,7 @@ $(document).ready(function() {
     /*categorySelect.on('change',function(){
         console.log(categorySelect.val());
     })*/
-    $("#contactInfo").on('click', submitWorker) //id to the form
+    $("#submitService").on('click', submitWorker) //id to the form
 
     console.log("Hola");
     //Post the new service in the page. 

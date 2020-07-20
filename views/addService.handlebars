@@ -1,56 +1,63 @@
 {{!-- Persistent NavBar --}}
-{{>navBar}}
+
 {{!-- Dropbox --}}
-<br>
-<!--<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle btn-info" type="button" id="selectCategory" data-toggle="dropdown"
-    aria-haspopup="true" aria-expanded="false">
-    Service Category
-  </button>-->
-  
-    <select id="selectCategory" aria-labelledby="Service Business Category">
-      {{#each data}}
-      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.categoryName}}</option>
-      {{/each}}
-    </select>
-<!--</div>-->
-<br>
-<hr style="border:3px solid #f1f1f1">
-<br>
-{{!-- Business Form Details --}}
+    {{!-- <select id="selectCategory" class="dropdown" aria-labelledby="Service Business Category">
+    {{#each data}}
+    <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.categoryName}}</option>
+    {{/each}}
+  </select>
+    <br>
+  <select id="userSelect" class="dropdown" aria-labelledby="Service Business Category">
+    {{#each user}}
+    <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
+    {{/each}}
+  </select> --}}
+<div class="container">
+  <h4>Add a new service: </h4>
+    <div class="newBusinessForm starRating vert-line">
+      <form>
+        <div class="">
+          <label for="selectCategory">Select a category for the service: </label>
+          <select id="selectCategory" class="form-control" aria-labelledby="Service Business Category">
+          {{#each data}}
+          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.categoryName}}</option>
+          {{/each}}
+          </select>
+        </div>
+        <div class="">
+          <label for="userSelect">Select your user: </label>
+          <select id="userSelect" class="form-control" aria-labelledby="Service Business Category">
+            {{#each user}}
+            <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="">
+          <label for="title">Writte a title for the service: </label>
+          <input type="text" class="form-control" id="title" placeholder="Example: Rodriguez Carpentry" aria-label="Business Name">
+        </div>
+        <div class="">
+          <label for="description">Writte a service description: </label>
+          <textarea id="description" class="form-control" placeholder="Example: Custom made furniture" aria-label="Details textarea"></textarea>
+        </div>
+        <div class="">
+          <label for="contactInfo">Writte how to contact or the address of the service: </label>
+          <input type="text" class="form-control" id="contactInfo" placeholder="Example: Contact via phone number or address: Del Mazo Street #34" aria-label="First Name">
+        </div>
 
-{{!-- <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle btn-info" type="button" id="selectCategory" data-toggle="dropdown"
-    aria-haspopup="true" aria-expanded="false">
-    User
-  </button> --}}
-    <select id="userSelect" class="dropdown" aria-labelledby="Service Business Category">
-      {{#each user}}
-      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
-      {{/each}}
-    </select>
-    {{!-- </div>
-</div> --}}
-
-
-<div class="newBusinessForm">
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" id="title" placeholder="Business Name" aria-label="Business Name">
-  </div>
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" id="description" placeholder="First Name" aria-label="First Name">
-  </div>
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" id="inputZipCode" placeholder="Zip Code" aria-label="zip code">
-  </div>
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Business Phone Number" aria-label="Phone Number">
-  </div>
-  <div class="input-group">
-    <div class="input-group-prepend">
-      <span class="input-group-text">Tell us about your business</span>
+        <div class="">
+          <label for="phoneNumber">Phone number: </label>
+          <input type="text" class="form-control" id="phoneNumber" placeholder="Example: 5512345678" aria-label="Phone Number">
+        </div>
+        <div class="">
+          <label for="zipCode">Zip Code: </label>
+          <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" aria-label="zip code">
+        </div>
+        <div class="">
+          <br>
+          <button type="submit" id="submitService" class="btn btn-info">Add Service</button>
+        </div>
+      </form>
     </div>
-    <textarea id="info" class="form-control" aria-label="Details textarea"></textarea>
   </div>
-  <button type="submit" id="contactInfo" class="btn btn-info">Add Business</button>
-</div>
+
