@@ -8,15 +8,20 @@ $(document).ready(function() {
         .then((console.log("Category Created!")));
         categoryNameInput = "";
     }
-
+    
+    $('.toast.catSuccessful').toast({animation: true, autohide: true, delay: 2000});
+    $('.toast.catUnSuccessful').toast({animation: true, autohide: true, delay: 2000});
     $("#submitCategory").on('click',function(event){
         event.preventDefault();
+
         if (!categoryNameInput.val().trim()) {
+            $('.toast.catUnSuccessful').toast("show");
             return
         } else {
             sendCategory({
                 categoryName: categoryNameInput.val().trim()
             });
+            $('.toast.catSuccessful').toast("show");
         };
     });
 });
