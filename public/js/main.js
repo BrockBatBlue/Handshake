@@ -7,13 +7,13 @@ $(document).ready(function(){
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position){
-            console.log(position);
+            //console.log(position);
             let latitude = position.coords.latitude;
             let longitude = position.coords.longitude;
             getLocation(latitude,longitude);
         })
     } else {
-        console.log("Geolocation is not supported!")
+        //console.log("Geolocation is not supported!")
     }
 
     function getLocation(latitude,longitude){
@@ -24,7 +24,7 @@ $(document).ready(function(){
             url:queryURL,
             method: 'GET'
         }).then((response)=>{
-            console.log(response);
+           // console.log(response);
         })
 
         $("#service").on('click',function(event){
