@@ -61,9 +61,6 @@
   h3 {
     font-weight: bolder; 
   }
-  h2 {
-    padding-bottom: 60%;
-  }
   .addService {
     display: flex;
     flex-direction: column;
@@ -97,8 +94,8 @@
   }
   .btn-cat {
     margin-left: 3%;
-    background-color: cornflowerblue;
-    border-color: cornflowerblue;
+    background-color: black;
+    border-color: black;
     color: white;
     width: 150px;
   }
@@ -194,3 +191,6 @@
     border: solid 1px black;
     background-color: white;
   }
+
+
+  

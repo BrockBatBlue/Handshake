@@ -1,38 +1,34 @@
 {{!-- Persistent NavBar --}}
-{{>navBar}}
-{{!-- Client Star Rates Here --}}
-<br>
-<div class="starSection vert-line">
-  <br>
-  <h4 id="addStars">Add your stars here</h4>
-  <br>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star"></span>
-  <span class="fa fa-star"></span>
-  <span class="fa fa-star"></span>
-  <span class="fa fa-star"></span>
-</div>
-<br>
-<hr style="border:3px solid #f1f1f1">
-<br>
+
 {{!-- Client adds review here --}}
-    <select id="userSelectRev" class="dropdown" aria-labelledby="Service Business Category">
-      {{#each userRev}}
-      <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
-      {{/each}}
-    </select>
-<div class="reviewSection vert-line">
-  <form class="review">
-    <br>
-    <div class="form-group">
-      {{!-- <label for="subject"> Review Title: <label> --}}
-      <input type="text" id="subject" placeholder="Review Title">  <br>
-      <label for="comment">Write your review here</label>
+<div class="container">
+  <h4 id="servTit">Service title</h4>
+  <div class="reviewSection vert-line">
+    <form class="review">
+      
+      <div>
+        <label for="userSelectRev">Select your user: </label>
+        <select id="userSelectRev" class="form-control" aria-labelledby="Service Business Category">
+          {{#each userRev}}
+          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="">
+        <label for="subject">Title: </label>
+        <input type="text" id="subject" class="form-control" placeholder="Review Title">
+      </div>
+      <div class="">  
+        <label for="comment">Write your review here: </label>
+        <textarea class="form-control" id="comment" rows="3"></textarea>
+        <br>
+      </div>
+      <div class="">
+        <label for="rating">Rating value: </label>
+        <input id="rating" type="text" class="form-control" placeholder="Review Rating">
+      </div>
       <br>
-      <textarea class="form-control" id="comment" rows="3"></textarea>
-      {{!-- <label for="rating"> Rating value: <label> --}}
-      <input id="rating" type="text" placeholder="Review Rating">
-    </div>
-    <button type="submit" class="btn btn-cat" id="reviewSubmit">Submit Review</button>
-  </form>
+      <button type="submit" class="btn btn-info" id="reviewSubmit">Submit Review</button>
+    </form>
+  </div>
 </div>
