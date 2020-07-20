@@ -40,7 +40,7 @@ $(document).ready(function() {
     })*/
     $("#submitService").on('click', submitWorker) //id to the form
 
-    console.log("Hola");
+    //console.log("Hola");
     //Post the new service in the page. 
     let sendPerson = (personInformation) => {
     titleInput.text(""); 
