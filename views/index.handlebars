@@ -1,24 +1,24 @@
 {{>navBar}}
-<br>
-<!--<div class="selectionTop">
-  <div class="dropdown selectService" id="selectCategory">
-    <button class="btn btn-info dropdown-toggle" type="button" id="selectServiceButton" data-toggle="dropdown"
-      aria-haspopup="true" aria-expanded="false">
-      Select Service
-    </button>-->
-    <div>
-      <select id="sendId" class="dropdown" aria-labelledby="Service Business Category">
-        <option class="dropdown-item"></option>
-        {{#each data}}
-        <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.categoryName}}</option>
-        {{/each}}
-      </select>
-      <button id="goButton"><a id="viewService"><i class="fas fa-arrow-right"></i></a></button>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <h3 class="text-dark"><a href="/servicesList" class="text-dark">View all services</a></h3>
     </div>
-  <!--</div>
-</div>-->
-  <h3><a href="/servicesList">All Services</a></h3>
-<br>
+
+    <div class="col-4">
+        <h3>Or select a category: </h3>
+    </div>
+    <div class="col-5">
+              <select id="sendId" class="dropdown" aria-labelledby="Service Business Category">
+          <option class="dropdown-item"></option>
+          {{#each data}}
+          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.categoryName}}</option>
+          {{/each}}
+        </select>
+        <button id="goButton"><a id="viewService">View services <i class="fas fa-arrow-right"></i></a></button>
+    </div>
+  </div>
+</div>
 
 <div class="content">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -53,4 +53,5 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
 </div>
