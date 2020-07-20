@@ -20,6 +20,9 @@ module.exports = function(app) {
   app.post("/api/reviews", function(req, res) {
     db.Reviews.create(req.body).then(function(dbReviews) {
       res.json(dbReviews);
+    })
+    .catch(function(err) {
+      res.json(err);
     });
   });
   app.delete("/api/reviews/:id", function(req, res) {
