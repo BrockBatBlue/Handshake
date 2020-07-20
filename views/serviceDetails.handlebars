@@ -1,32 +1,37 @@
 {{!-- Persistent NavBar --}}
-{{>navBar}}
+
 {{!-- Service Details Bar --}}
 <br>
+<div class="container">
+  {{!-- Service Details --}}
+    <h3 id="serviceTitle" style="float: left;">Business Name Goes Here</h3><span id="serviceCategory"></span>
+    <br>
+    <br>
+    <div class="detailsSection vert-line">
+    <br>
+    <p id="serviceDescription"></p>
+    <p id="serviceContactInfo"></p>
+    <p id="servicePhoneNum"></p>
+    <p id="serviceZipCode"></p>
 
-{{!-- Service Details --}}
-<div class="detailsSection vert-line">
-  <h3 id="serviceTitle">Business Name Goes Here</h3><span id="serviceCategory"></span>
-  <p id="serviceDescription"></p>
-  <p id="serviceContactInfo"></p>
-  <p id="servicePhoneNum"></p>
-  <p id="serviceZipCode"></p>
+    
+    {{!-- <a href="/reviews">
+      <button type="button" class="btn btn-cat addReviewBtn">Add Your Review</button>
+    </a> --}}
+  </div>
 
-  
-  {{!-- <a href="/reviews">
-    <button type="button" class="btn btn-cat addReviewBtn">Add Your Review</button>
-  </a> --}}
-</div>
+  <hr style="border:3px solid #f1f1f1">
+      <h3>All Reviews</h3>
+  <div class="starRating vert-line" id="reviewsSection">
 
-<hr style="border:3px solid #f1f1f1">
-<div class="starRating vert-line" id="reviewsSection">
-  <h3>All Reviews</h3>
-  {{!-- <span class="heading">Client Rating</span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star"></span>
-  <p>4.1 average based on 254 reviews.</p> --}}
+    {{!-- <span class="heading">Client Rating</span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <p>4.1 average based on 254 reviews.</p> --}}
+  </div>
 </div>
 
 
