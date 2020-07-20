@@ -41,13 +41,21 @@ $(document).ready(function() {
 
         submitReview(newReview);
     }
-
+    // Initializing toasts fail and success
+    $('.toast.reviewSuccessful').toast({animation: true, autohide: true, delay: 2000});
+    $('.toast.reviewUnSuccessful').toast({animation: true, autohide: true, delay: 2000});
     $("#reviewSubmit").on('click',handleFormSubmit)        //id for review form
 
     //Post the new review
     let submitReview = (post) => {
         $.post("/api/reviews",post,() => {
             location.reload();
+        })
+        .then(()=>{
+            $('.toast.reviewSuccessful').toast("show");
+        })
+        .catch(()=>{
+            $('.toast.reviewUnSuccessful').toast("show");
         });  
     };    
 });

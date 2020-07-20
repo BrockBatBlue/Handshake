@@ -19,12 +19,21 @@ $(document).ready(function() {
     /*categorySelect.on('change',function(){
         console.log(categorySelect.val());
     })*/
+    // Initializing toasts fail and success
+    $('.toast.userSuccessful').toast({animation: true, autohide: true, delay: 2000});
+    $('.toast.userUnSuccessful').toast({animation: true, autohide: true, delay: 2000});
     $("#userForm").on('click', createUser) //id to the form
 
     //Post the new service in the page. 
     let newUser = (userInfo) => {
         console.log(userInfo);
         $.post("/api/users",userInfo)
-        .then((console.log("User Created! :", userInfo)));
+        .then(()=>{
+            $('.toast.userSuccessful').toast("show");
+            console.log("User Created! :", userInfo)
+        })
+        .catch(()=>{
+            $('.toast.userUnSuccessful').toast("show");
+        })
     }
 });

@@ -38,6 +38,10 @@ $(document).ready(function() {
     /*categorySelect.on('change',function(){
         console.log(categorySelect.val());
     })*/
+    // Initializing toasts fail and success
+    $('.toast.serviceSuccessful').toast({animation: true, autohide: true, delay: 2000});
+    $('.toast.serviceUnSuccessful').toast({animation: true, autohide: true, delay: 2000});
+
     $("#submitService").on('click', submitWorker) //id to the form
 
     console.log("Hola");
@@ -45,6 +49,12 @@ $(document).ready(function() {
     let sendPerson = (personInformation) => {
         console.log(personInformation);
         $.post("/api/service",personInformation)
-        .then((console.log("Service Created! :", personInformation)));
+        .then(()=>{
+            $('.toast.serviceSuccessful').toast("show");
+            console.log("Service Created! :", personInformation)
+        })
+        .catch(()=>{
+            $('.toast.serviceUnSuccessful').toast("show");
+        });
     }
 });
