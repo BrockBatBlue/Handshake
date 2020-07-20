@@ -18,7 +18,7 @@ $(document).ready(function() { //File to render the selected service
     };
 
     let renderAll = () => {
-        console.log("HOLA");
+        //console.log("HOLA");
         $.get("/api/service",(data)=>{ //
             console.log("DATA",data);
             posts = data;
@@ -56,7 +56,7 @@ $(document).ready(function() { //File to render the selected service
             newTr.append("<td><a href='serviceDetails?service_id=" + posts[i].id + "'>Details</td>");
             newTr.append("<td><a href='reviews?service_id=" + posts[i].id + "'>Write a review</td>");
             $("tbody").append(newTr);
-            console.log(newTr);
+            //console.log(newTr);
         }
     }
 
