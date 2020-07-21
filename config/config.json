@@ -1,7 +1,11 @@
 {
     "development": {
       "username": "root",
+<<<<<<< HEAD
       "password": "Arigatorei7-",
+=======
+      "password": "",
+>>>>>>> 13d42ea03f5bc404c764b5b0d66bfa666e38b836
       "database": "handshake_db",
       "host": "127.0.0.1",
       "port": 3306,
