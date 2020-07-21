@@ -6,7 +6,7 @@ $(document).ready(function() {
         console.log(category);
         $.post("/api/category",category)
         .then((console.log("Category Created!")));
-        categoryNameInput = "";
+        $("#categoryForm").trigger("reset");
     }
     
     $('.toast.catSuccessful').toast({animation: true, autohide: true, delay: 2000});
@@ -22,6 +22,7 @@ $(document).ready(function() {
                 categoryName: categoryNameInput.val().trim()
             });
             $('.toast.catSuccessful').toast("show");
+            $("#categoryForm").trigger("reset");
         };
     });
 });

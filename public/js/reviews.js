@@ -46,14 +46,18 @@ $(document).ready(function() {
 
     //Post the new review
     let submitReview = (post) => {
+        if (post.title == "" || post.text == "" || post.rating == "") {
+            $('.toast.reviewUnSuccessful').toast("show");
+        } else {
         $.post("/api/reviews",post,() => {
             location.reload();
         })
         .then(()=>{
             $('.toast.reviewSuccessful').toast("show");
         })
-        .catch(()=>{
+    }
+        /*.catch(()=>{
             $('.toast.reviewUnSuccessful').toast("show");
-        });  
+        });*/  
     };    
 });

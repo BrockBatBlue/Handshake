@@ -47,19 +47,23 @@ $(document).ready(function() {
     //console.log("Hola");
     //Post the new service in the page. 
     let sendPerson = (personInformation) => {
-    titleInput.text(""); 
-    descriptionInput.text("");
-    contactInfoInput.text("");
-    phoneInput.text("");
-    zipCodeInput.text("");
+    if (personInformation.title == "" || 
+    personInformation.description == "" || 
+    personInformation.contactInfo == "" ||
+    personInformation.phoneNumber == "" ||
+    personInformation.zipCode == "") {
+        $('.toast.serviceUnSuccessful').toast("show");
+     } else {
         console.log(personInformation);
         $.post("/api/service",personInformation)
         .then(()=>{
             $('.toast.serviceSuccessful').toast("show");
-            console.log("Service Created! :", personInformation)
+            console.log("Service Created! :", personInformation);
+            $("#addNewService").trigger("reset");
         })
-        .catch(()=>{
+    }
+        /*.catch(()=>{
             $('.toast.serviceUnSuccessful').toast("show");
-        });
+        });*/
     }
 });
