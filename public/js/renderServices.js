@@ -45,8 +45,6 @@ $(document).ready(function() { //File to render the selected service
     }
 
     let initializeRows2 = (posts) => {
-        console.log(posts.length);
-        $("#servTit").text("Review for:  "+ posts[0].title);
         
         for (let i = 0; i <posts.length; i++) {
             let newTr = $("<tr>");      //New line

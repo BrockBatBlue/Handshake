@@ -17,11 +17,8 @@ $(document).ready(function() {
 
     //Create a new review
     let handleFormSubmit = (event) => {
-        // if (!subjectInput.val().trim() || !commentInput.val().trim() || !ratingSelect.val()) {
-        //     return 
-        // }
         event.preventDefault();
-
+        //$("#servTit").text("Review for:  "+ posts[0].title);
         let url = window.location.search;
         let serviceID;
         if (url.indexOf("?service_id=") !== -1) {
@@ -29,6 +26,7 @@ $(document).ready(function() {
         }
         console.log("Service ID: ", serviceID)
         console.log("User ID:", userSelectRev.val())
+
 
         let newReview = {
 
