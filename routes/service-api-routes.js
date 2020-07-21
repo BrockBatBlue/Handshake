@@ -33,6 +33,17 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/serviceZip/:zip", function(req, res) {
+    db.Service.findAll({
+      where: {
+        zipCode: req.params.zip
+      },
+      include: [db.User,db.Categories,db.Reviews]
+    }).then(function(dbService) {
+      res.json(dbService);
+    });
+  });
+
   app.post("/api/service", function(req, res) {
     db.Service.create(req.body).then(function(dbService) {
       res.json(dbService);
