@@ -69,7 +69,7 @@ $(document).ready(function() { //File to render the selected service
             newTr.data("data",posts);
             newTr.append("<td>" + categoryArray[i].title + "</td>");
             newTr.append("<td>" + categoryArray[i].phoneNumber + "</td>");
-            newTr.append("<td>" + posts[i].zipCode + "</td>");
+            newTr.append("<td>" + categoryArray[i].zipCode + "</td>");
             newTr.append("<td><a href='serviceDetails?service_id=" + categoryArray[i].id + "'>Details</td>");
             newTr.append("<td><a href='reviews?service_id=" + categoryArray[i].id + "'>Write a review</td>");
             $("tbody").append(newTr);
