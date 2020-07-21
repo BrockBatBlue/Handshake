@@ -214,6 +214,9 @@
   }
 
   /* add service hbs page styles */
+  #addNewServ {
+    margin-left: 10%;
+  }
   .dropdown {
     margin-left: 10%;
   }
