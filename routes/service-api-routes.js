@@ -47,7 +47,10 @@ module.exports = function(app) {
   app.post("/api/service", function(req, res) {
     db.Service.create(req.body).then(function(dbService) {
       res.json(dbService);
-    });
+    })
+    .catch(function(err) {
+      res.json(err);
+    })
   });
 
   app.delete("/api/service/:id", function(req, res) {
