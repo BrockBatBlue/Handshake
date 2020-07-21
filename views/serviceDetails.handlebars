@@ -1,38 +1,27 @@
 {{!-- Persistent NavBar --}}
-  {{>navBar}}
+{{>navBar}}
 {{!-- Service Details Bar --}}
 <br>
 <div class="container">
   {{!-- Service Details --}}
-    <h3 id="serviceTitle" style="float: left;"></h3><span id="serviceCategory"></span>
-    <br>
-    <br>
-    <div class="detailsSection vert-line">
+  <h3 id="serviceTitle" style="float: left;"></h3><span id="serviceCategory"></span>
+  <br>
+  <br>
+  <div class="detailsSection vert-line">
     <br>
     <p id="serviceDescription"></p>
     <p id="serviceContactInfo"></p>
     <p id="servicePhoneNum"></p>
     <p id="serviceZipCode"></p>
-
-    
-    {{!-- <a href="/reviews">
-      <button type="button" class="btn btn-cat addReviewBtn">Add Your Review</button>
-    </a> --}}
   </div>
-
   <hr style="border:3px solid #f1f1f1">
-      <h3>All Reviews</h3>
-  <div class="starRating vert-line" id="reviewsSection">
-
-    {{!-- <span class="heading">Client Rating</span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <p>4.1 average based on 254 reviews.</p> --}}
-  </div>
+  <h3 id="serviceTitle">All Reviews</h3>
+  <div class="starRating vert-line" id="reviewsSection"></div>
 </div>
-	<script src="../js/serviceDetails.js"></script>
+<script src="../js/serviceDetails.js"></script>
 
 {{!-- <script src="../public/js/serviceDetails.js"></script> --}}
+
+{{!-- <a href="/reviews">
+      <button type="button" class="btn btn-cat addReviewBtn">Add Your Review</button>
+    </a> --}}
