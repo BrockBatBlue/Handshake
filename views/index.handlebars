@@ -1,12 +1,12 @@
 {{>navBar}}
-<div class="container">
+<div class="container serviceBar">
   </br>
   <div class="row">
     <div class="col-3">
-      <a href="/servicesList" class="text-dark" style="font-weight: 600; font-size:24px">View all services</a>
+      <a href="/servicesList" class="text-dark" id="viewServ" style="font-weight: 450; font-size:24px">View all services</a>
     </div>
-    <div class="col-9" style="font-weight: 500; font-size:20px">
-      <label for="sendId">Search by Category: </label>
+    <div class="col-9 catServ" style="font-weight: 500; font-size:20px">
+      <label id="catSearch" for="sendId">Search by Category: </label>
       <select id="sendId" class="" aria-labelledby="Service Business Category">
         <option class=""></option>
         {{#each data}}
@@ -16,8 +16,8 @@
         <button id="goButton"><a id="viewService" style="font-weight: 500; font-size:20px" >View services <i class="fas fa-arrow-right"></i></a></button>
     </div>
   </div>
-  <hr style="border:3px solid #f1f1f1">
 </div>
+  <hr style="border:3px solid #f1f1f1">
 
 <div class="container">
   <div class="row">
@@ -59,7 +59,7 @@
 
   {{!-- Cards section begins here --}}
   <br>
-  <div class="">
+  <div class="serviceCard">
     <h2 id="zipCodeS">Services around your area</h2>
     <p ></p>
   </div>
