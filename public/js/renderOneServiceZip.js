@@ -9,17 +9,27 @@ $(document).ready(function() { //File to render the selected person
     }
   
     function showPosition(position) {
-        var lat = 19.3689777 /*position.coords.latitude*/;
-        var long = -99.25935699999999 /*position.coords.longitude*/;
+        var lat = 19.379093 /*19.3689777 position.coords.latitude*/;
+        var long = -99.246689  /*-99.25935699999999 position.coords.longitude*/;
         console.log(lat, long);
         var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyBcaAnYXn42whS3AAvvwoCkjsE4pbdihwU";
+        console.log(url);
         $.ajax({
             type: "GET",
             url: url,
             dataType: "json",
             success: function (msg) {
                 var results = msg.results;
-                zip = results[0].address_components[5].long_name;
+                console.log("the info "+results[0].address_components.length);
+                var addComp=results[0].address_components.length;
+                var addCompZip;
+                for(var i=0; i<addComp; i++){
+                    if(results[0].address_components[i].types[0]==="postal_code"){
+                        console.log(results[0].address_components[i].types[0]); 
+                        addCompZip=i;
+                    }
+                }
+                zip = results[0].address_components[addCompZip].long_name;
                 //alert("Your Zip Code is: " + zip);
                 console.log("Your Zip Code is: " + zip);
                 getServicesByZip(zip);
@@ -36,9 +46,11 @@ $(document).ready(function() { //File to render the selected person
             console.log("Services by Zip",data);
             renderServicesZip(data);
         });
+        $("#zipCodeS").text("Services around your area (Postal Code: "+zipCode+")");
     }
     
     let renderServicesZip = (services) => {
+
         services.forEach(element => {
             console.log(element);
             var colDiv=$("<div>");

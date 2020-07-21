@@ -27,6 +27,17 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/servicesList", function(req, res) {
+    db.Categories.findAll({}).then((data)=>{
+      //console.log("LIST OF CATEGORIES",data);
+      console.log("LIST OF CATEGORIES",data);
+      //console.log("LIST OF CATEGORIES",data.dataValues);
+      //console.log("LIST OF CATEGORIES",data[0].dataValues.categoryName);
+      //console.log(data[0].Categories);
+      res.render("servicesList", {data});
+    });
+  });
+
   // add service route goes to the addService template
   app.get("/addService", function(req, res) {
     db.Categories.findAll({}).then((data)=>{
