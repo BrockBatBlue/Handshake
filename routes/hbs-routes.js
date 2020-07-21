@@ -26,7 +26,7 @@ module.exports = function(app) {
       res.render("index", {data});
     });
   });
-
+ 
   app.get("/api/servicesList", function(req, res) {
     db.Categories.findAll({}).then((data)=>{
       //console.log("LIST OF CATEGORIES",data);
