@@ -27,13 +27,19 @@ $(document).ready(function() {
     //Post the new service in the page. 
     let newUser = (userInfo) => {
         console.log(userInfo);
-        $.post("/api/users",userInfo)
-        .then(()=>{
-            $('.toast.userSuccessful').toast("show");
-            console.log("User Created! :", userInfo)
-        })
-        .catch(()=>{
+        if (userInfo.userName == "" || userInfo.name == "" || userInfo.lastName == "" 
+        || userInfo.email == "") { 
             $('.toast.userUnSuccessful').toast("show");
-        })
+        } else {
+            $.post("/api/users",userInfo)
+            .then(()=>{
+                $('.toast.userSuccessful').toast("show");
+                console.log("User Created! :", userInfo)
+                $("#userForm2").trigger("reset");
+            })
+        }
+        /*.catch(()=>{
+            $('.toast.userUnSuccessful').toast("show");
+        })*/
     }
 });
