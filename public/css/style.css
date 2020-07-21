@@ -19,22 +19,41 @@
     padding: 20px;
     font-size: large;
   }
-  #goButton:hover {
-    background-color: blanchedalmond !important;
-  }
-  #goButton {
-    background-color: rgba(255, 235, 205, 0.253);
-    border-radius: 0.3em;
-    border: solid 1px black;
-  }
-  #sendId{
-    border-radius: 0.3em;
-    background-color: rgba(255, 235, 205, 0.253);
-  }
-  #sendId:hover {
-    background-color: blanchedalmond;
-  }
   /* Body of index hbs styles */
+  .serviceBar {
+    margin-left: 28%;
+  }
+    #goButton:hover {
+      background-color: blanchedalmond !important;
+      border: solid 3px blanchedalmond;
+    }
+    #goButton {
+      background-color: rgba(255, 235, 205, 0.253);
+      border-radius: 0.3em;
+      border: solid 2px blanchedalmond; 
+      font-family: 'Archivo Black', sans-serif;
+      color: rgb(104, 55, 15);
+    }
+    #goButton:focus {
+      border: solid 2px blanchedalmond !important;
+    }
+    .text-dark {
+      font-family: 'Archivo Black', sans-serif;
+    }
+    #catSearch {
+      font-family: 'Archivo Black', sans-serif;
+      /* font-weight: 700; */
+    }
+    #sendId{
+      border-radius: 0.3em;
+      background-color: rgba(255, 235, 205, 0.253);
+      border: solid 2px blanchedalmond;
+      font-family: 'Archivo Black', sans-serif;
+      color: rgb(104, 55, 15);
+    }
+    #sendId:hover {
+      background-color: blanchedalmond;
+    }
   .btn {
     min-width: 150px;
     height: 38px;
@@ -74,6 +93,7 @@
     justify-content: space-around;
   }
   h3 {
+    font-family: 'Archivo Black', sans-serif;
     font-weight: bolder; 
   }
   .addService {
@@ -83,9 +103,19 @@
     align-items: center;
   }
   .serviceName {
+    font-family: 'Archivo Black', sans-serif;
     color: rgb(59, 66, 80);
     font-weight: bolder;
     background-color: rgba(248, 234, 213, 0.52);
+    border-radius: 10px;
+  }
+  #zipCodeS {
+    font-family: 'Archivo Black', sans-serif;
+  }
+  .serviceCard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .card-body {
     background-color: blanchedalmond;
@@ -94,6 +124,7 @@
   h4 {
     display: flex;
     justify-content: flex-start;
+    font-family: 'Archivo Black', sans-serif;
   }
   #creationTitle { 
     margin-left: 11%;
@@ -159,7 +190,7 @@
   }
 
   th {
-    background-color: rgb(96, 149, 247);
+    background-color: blanchedalmond;
   }
 
   th, td {
@@ -175,17 +206,18 @@
     background-color: rgb(216, 218, 219);
   }
   /* service details page styles */
-
-  .checked {
-    color: rgb(255, 217, 0);
-  }
-
-  .starRating {
-    margin-left: 7%;
-    padding-left: 3%;
+  #servTit {
+    margin-left: 10%;
   }
 
   .detailsSection {
+    margin-left: 7%;
+    padding-left: 3%;
+  }
+  #reviewSection {
+    margin-left: 15%;
+  }
+  .starRating {
     margin-left: 7%;
     padding-left: 3%;
   }
@@ -193,10 +225,11 @@
   .vert-line {
     border-left: 4px solid rgb(251, 230, 36);
   }
-  .addReviewBtn {
-    min-width: 180px;
+  #serviceTitle {
+    margin-left: 7%;
+    margin-bottom:2%;
   }
-
+ 
   /* reviews hbs page styles */
   .starSection {
     margin-left: 7%;
@@ -214,6 +247,16 @@
   }
 
   /* add service hbs page styles */
+  label {
+    font-family: 'Lato', sans-serif;
+  }
+  :placeholder-shown {
+    font-family: 'Lato', sans-serif;
+  }
+  button {
+    font-family: 'Archivo Black', sans-serif;
+  }
+
   #addNewServ {
     margin-left: 10%;
   }
@@ -227,12 +270,14 @@
     justify-content: center;
     align-content: center;
     width: 50%;
+    padding-left: 15px;
   }
   
   .input-group {
     margin-left: 20%;
   }
 
+<<<<<<< HEAD
 
   .noReviews {
     background-color: rgb(250, 249, 249);
@@ -263,4 +308,9 @@
     padding: 30px;
   }
  
+=======
+ p {
+   font-family: 'Lato', sans-serif;
+ }
+>>>>>>> 2894fe7ab9eab806adb269322c647c698c70d236
   
