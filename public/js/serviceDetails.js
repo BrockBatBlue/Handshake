@@ -8,20 +8,28 @@ $(document).ready(function() {
 
     let getServiceDetails = () => {
         $.get(`/api/service/${serviceID}`,(data)=>{ //
+            console.log(data);
+            if (data[0].Reviews.length === 0) {
+                renderEmpty();
+            } 
             renderHTML(data);
         });
     }
 
     getServiceDetails();
 
+    let renderEmpty = () => {
+        $("#noReviews").css("display","block");
+    }
+
     let renderHTML = (data) =>{
         console.log("Service data inside render html: ",data);
         $("#serviceTitle").text(data[0].title);
-        $("#serviceDescription").text("Service description: "+data[0].description);
-        $("#serviceContactInfo").text("Contact Info: "+data[0].contactInfo);
-        $("#servicePhoneNum").text("Phone Number: "+data[0].phoneNumber);
-        $("#serviceZipCode").text("Zip Code: "+data[0].zipCode);
-        $("#serviceCategory").text("("+data[0].Category.categoryName+")");
+        $("#serviceDescription").text("Service description: " + data[0].description);
+        $("#serviceContactInfo").text("Contact Info: " + data[0].contactInfo);
+        $("#servicePhoneNum").text("Phone Number: " + data[0].phoneNumber);
+        $("#serviceZipCode").text("Zip Code: " + data[0].zipCode);
+        $("#serviceCategory").text("(" + data[0].Category.categoryName+")");
         
         data[0].Reviews.forEach(element => {
             var reviewDiv=$("<div>");

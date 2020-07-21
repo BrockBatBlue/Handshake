@@ -15,8 +15,19 @@
     <p id="serviceZipCode"></p>
   </div>
   <hr style="border:3px solid #f1f1f1">
-  <h3 id="serviceTitle">All Reviews</h3>
-  <div class="starRating vert-line" id="reviewsSection"></div>
+      <h3>All Reviews</h3>
+  <div class="starRating vert-line" id="reviewsSection">
+    <div class="container noReviews" id="noReviews">
+      <h2 class="noReviews-text">No reviews for this person!</h2>
+    </div>
+    {{!-- <span class="heading">Client Rating</span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <p>4.1 average based on 254 reviews.</p> --}}
+  </div>
 </div>
 <script src="../js/serviceDetails.js"></script>
 

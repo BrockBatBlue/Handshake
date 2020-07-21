@@ -277,7 +277,34 @@
     margin-left: 20%;
   }
 
- p {
-   font-family: 'Lato', sans-serif;
- }
+
+  .noReviews {
+    background-color: rgb(250, 249, 249);
+    margin: 10px auto;
+    height: auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.1em;
+    display: none;
+  }
+
+  .noReviews-text {
+    text-align: center;
+    padding: 30px;
+  }
+ 
+  .noServices {
+    background-color: rgb(250, 249, 249);
+    width: 52%;
+    margin: 20px auto;
+    height: auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.1em;
+    display: none;
+  }
+
+  .noServices-text {
+    text-align: center;
+    padding: 30px;
+  }
+ 
   
