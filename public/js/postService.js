@@ -47,6 +47,11 @@ $(document).ready(function() {
     //console.log("Hola");
     //Post the new service in the page. 
     let sendPerson = (personInformation) => {
+    titleInput.text(""); 
+    descriptionInput.text("");
+    contactInfoInput.text("");
+    phoneInput.text("");
+    zipCodeInput.text("");
         console.log(personInformation);
         $.post("/api/service",personInformation)
         .then(()=>{
