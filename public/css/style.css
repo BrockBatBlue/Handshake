@@ -21,7 +21,19 @@
   }
   /* Body of index hbs styles */
   .serviceBar {
-    margin-left: 28%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+  }
+  hr.servBarHr {
+    margin-top: 0;
+  }
+  .catServ {
+    display: flex;
+    align-items: center;
   }
     #goButton:hover {
       background-color: blanchedalmond !important;
@@ -42,7 +54,8 @@
     }
     #catSearch {
       font-family: 'Archivo Black', sans-serif;
-      /* font-weight: 700; */
+      margin-bottom: 0;
+
     }
     #sendId{
       border-radius: 0.3em;
@@ -231,16 +244,6 @@
   }
  
   /* reviews hbs page styles */
-  .starSection {
-    margin-left: 7%;
-    padding-left: 3%;
-  }
-
-  #addStars {
-    display: flex;
-    justify-content: flex-start;
-  }
-
   .reviewSection {
     margin-left: 7%;
     padding-left: 3%;
@@ -281,14 +284,39 @@
    font-family: 'Lato', sans-serif;
  }
  /* Toasts  */
- .reviewSuccessful, .reviewUnSuccessful {
+ .reviewSuccessful {
+  margin-left: 20%;
+  margin-bottom: 20%;
+ } 
+ .reviewUnSuccessful {
    margin-left: 20%;
    margin-bottom: 20%;
  }
- .serviceSuccessful, .serviceUnSuccessful {
+ .serviceSuccessful{
   margin-left: 20%;
-  margin-bottom: 30%;
+  margin-bottom: 0;
+ } 
+ .serviceUnSuccessful {
+  margin-left: 20%;
+  margin-top: 0;
  }
+ .catSuccessful {
+  margin-left: 20%;
+  margin-bottom: 20%;
+ }
+ .catUnSuccessful {
+  margin-left: 20%;
+  margin-bottom: 20%;
+ } 
+ .userSuccessful {
+  margin-left: 20%;
+  margin-bottom: 20%;
+ }
+ .userUnSuccessful {
+  margin-left: 20%;
+  margin-bottom: 20%;
+ }
+ 
 /* reviews hbs page */
   .noReviews {
     background-color: rgb(250, 249, 249);

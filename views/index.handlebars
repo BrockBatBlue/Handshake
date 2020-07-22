@@ -1,24 +1,24 @@
 {{>navBar}}
 <div class="container serviceBar">
-  </br>
-  <div class="row">
-    <div class="col-3">
-      <a href="/servicesList" class="text-dark" id="viewServ" style="font-weight: 450; font-size:24px">View all services</a>
-    </div>
-    <div class="col-9 catServ" style="font-weight: 500; font-size:20px">
-      <label id="catSearch" for="sendId">Search by Category: </label>
-      <select id="sendId" class="" aria-labelledby="Service Business Category">
-        <option class=""></option>
-        {{#each data}}
-        <option class="" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.categoryName}}</option>
-        {{/each}}
-      </select>
-        <button id="goButton"><a id="viewService" style="font-weight: 500; font-size:20px" >View services <i class="fas fa-arrow-right"></i></a></button>
-    </div>
+  {{!-- <div class="row"> --}}
+  <div>
+    <a href="/servicesList" class="text-dark" id="viewServ" style="font-weight: 450; font-size:24px">View all
+      services</a>
   </div>
+  <div class="catServ" style="font-weight: 500; font-size:20px">
+    <label id="catSearch" for="sendId">Search by Category: </label>
+    <select id="sendId" class="" aria-labelledby="Service Business Category">
+      <option class=""></option>
+      {{#each data}}
+      <option class="" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.categoryName}}</option>
+      {{/each}}
+    </select>
+    <button id="goButton"><a id="viewService" style="font-weight: 500; font-size:20px">View services <i
+          class="fas fa-arrow-right"></i></a></button>
+  </div>
+  {{!-- </div> --}}
 </div>
-  <hr style="border:3px solid #f1f1f1">
-
+<hr class="servBarHr" style="border:3px solid #f1f1f1">
 <div class="container">
   <div class="row">
     <div class="content">
@@ -32,16 +32,19 @@
             </div>
           </div>
           <div class="carousel-item" data-interval="5000">
-            <img src="https://makeallclean.com/blog/wp-content/uploads/2019/07/blg-2.jpg" class="d-block w-100" alt="...">
+            <img src="https://makeallclean.com/blog/wp-content/uploads/2019/07/blg-2.jpg" class="d-block w-100"
+              alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h2 class="serviceName" >You can scroll below to find all the services posted in your area, or go to view All Services</h2>
+              <h2 class="serviceName">You can scroll below to find all the services posted in your area, or go to view
+                All Services</h2>
             </div>
           </div>
           <div class="carousel-item" data-interval="5000">
             <img src="https://www.oneshotplumbing.com/wp-content/uploads/2017/03/plumbing-services.jpg"
               class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h2 class="serviceName">You can also post a new category and service if you have a business in this area!</h2>
+              <h2 class="serviceName">You can also post a new category and service if you have a business in this area!
+              </h2>
             </div>
           </div>
         </div>
@@ -56,17 +59,14 @@
       </div>
     </div>
   </div>
-
   {{!-- Cards section begins here --}}
   <br>
   <div class="serviceCard">
     <h2 id="zipCodeS">Services around your area</h2>
-    <p ></p>
+    <p></p>
   </div>
   <br>
-  <div class="row row-cols-1 row-cols-md-3" id="homeZipServices">
-
-  </div>
+  <div class="row row-cols-1 row-cols-md-3" id="homeZipServices"></div>
 </div>
 
 <script src="/js/renderOneServiceZip.js"></script>

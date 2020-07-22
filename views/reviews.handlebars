@@ -1,5 +1,5 @@
 {{!-- Persistent NavBar --}}
-  {{>navBar}}
+{{>navBar}}
 {{!-- Client adds review here --}}
 <br>
 <div class="container">
@@ -10,7 +10,8 @@
         <label for="userSelectRev">Select your user: </label>
         <select id="userSelectRev" class="form-control" aria-labelledby="Service Business Category">
           {{#each userRev}}
-          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
+          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.userName}}
+          </option>
           {{/each}}
         </select>
       </div>
@@ -18,7 +19,7 @@
         <label for="subject">Title: </label>
         <input type="text" id="subject" class="form-control" placeholder="Review Title">
       </div>
-      <div class="">  
+      <div class="">
         <label for="comment">Write your review here: </label>
         <textarea class="form-control" id="comment" rows="3"></textarea>
         <br>
@@ -35,7 +36,8 @@
 {{!-- Successful Toast --}}
 <div class="toast reviewSuccessful" role="alert" aria-live="assertive" id="reviewCreated" aria-atomic="true">
   <div class="toast-header">
-    <img src="https://www.benevablack.com/wp-content/uploads/2018/12/check-mark-green-tick-mark.png" style="width: 20px; height: 20px" class="rounded mr-2" alt="...">
+    <img src="https://www.benevablack.com/wp-content/uploads/2018/12/check-mark-green-tick-mark.png"
+      style="width: 20px; height: 20px" class="rounded mr-2" alt="...">
     <strong class="mr-auto">Success!</strong>
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -48,7 +50,8 @@
 {{!-- Unsuccessful Toast --}}
 <div class="toast reviewUnSuccessful" role="alert" aria-live="assertive" id="reviewNotCreated" aria-atomic="true">
   <div class="toast-header">
-    <img src="https://www.botlibre.biz/media/a532564-0.png" style="width: 20px; height: 20px" class="rounded mr-2" alt="...">
+    <img src="https://www.botlibre.biz/media/a532564-0.png" style="width: 20px; height: 20px" class="rounded mr-2"
+      alt="...">
     <strong class="mr-auto">Fail!</strong>
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
       <span aria-hidden="true">&times;</span>

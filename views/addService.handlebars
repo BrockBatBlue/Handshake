@@ -1,70 +1,64 @@
 {{!-- Persistent NavBar --}}
-  {{>navBar}}
-{{!-- Dropbox --}}
-    {{!-- <select id="selectCategory" class="dropdown" aria-labelledby="Service Business Category">
-    {{#each data}}
-    <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.categoryName}}</option>
-    {{/each}}
-  </select>
-    <br>
-  <select id="userSelect" class="dropdown" aria-labelledby="Service Business Category">
-    {{#each user}}
-    <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
-    {{/each}}
-  </select> --}}
-  <br>
+{{>navBar}}
+<br>
 <div class="container totalForm">
   <h4 id="addNewServ">Add a new service: </h4>
-    <div class="newBusinessForm starRating vert-line">
-      <form id="addNewService">
-        <div class="">
-          <label for="selectCategory">Select a category for the service: </label>
-          <select id="selectCategory" class="form-control" aria-labelledby="Service Business Category">
+  <div class="newBusinessForm starRating vert-line">
+    <form id="addNewService">
+      <div class="">
+        <label for="selectCategory">Select a category for the service: </label>
+        <select id="selectCategory" class="form-control" aria-labelledby="Service Business Category">
           {{#each data}}
-          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.categoryName}}</option>
+          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.categoryName}}
+          </option>
           {{/each}}
-          </select>
-        </div>
-        <div class="">
-          <label for="userSelect">Select your user: </label>
-          <select id="userSelect" class="form-control" aria-labelledby="Service Business Category">
-            {{#each user}}
-            <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}} >{{dataValues.userName}}</option>
-            {{/each}}
-          </select>
-        </div>
-        <div class="">
-          <label for="title">Write a title for the service: </label>
-          <input type="text" class="form-control" id="title" placeholder="Example: Rodriguez Carpentry" aria-label="Business Name">
-        </div>
-        <div class="">
-          <label for="description">Write a service description: </label>
-          <textarea id="description" class="form-control" placeholder="Example: Custom made furniture" aria-label="Details textarea"></textarea>
-        </div>
-        <div class="">
-          <label for="contactInfo">Write how to contact or the address of the service: </label>
-          <input type="text" class="form-control" id="contactInfo" placeholder="Example: Contact via phone number or address: Del Mazo Street #34" aria-label="First Name">
-        </div>
-
-        <div class="">
-          <label for="phoneNumber">Phone number: </label>
-          <input type="text" class="form-control" id="phoneNumber" placeholder="Example: 5512345678" aria-label="Phone Number">
-        </div>
-        <div class="">
-          <label for="zipCode">Zip Code: </label>
-          <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" aria-label="zip code">
-        </div>
-        <div class="">
-          <br>
-          <button type="submit" id="submitService" class="btn btn-info">Add Service</button>
-        </div>
-      </form>
-    </div>
+        </select>
+      </div>
+      <div class="">
+        <label for="userSelect">Select your user: </label>
+        <select id="userSelect" class="form-control" aria-labelledby="Service Business Category">
+          {{#each user}}
+          <option class="dropdown-item" value={{dataValues.id}} data-id={{dataValues.id}}>{{dataValues.userName}}
+          </option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="">
+        <label for="title">Write a title for the service: </label>
+        <input type="text" class="form-control" id="title" placeholder="Example: Rodriguez Carpentry"
+          aria-label="Business Name">
+      </div>
+      <div class="">
+        <label for="description">Write a service description: </label>
+        <textarea id="description" class="form-control" placeholder="Example: Custom made furniture"
+          aria-label="Details textarea"></textarea>
+      </div>
+      <div class="">
+        <label for="contactInfo">Write how to contact or the address of the service: </label>
+        <input type="text" class="form-control" id="contactInfo"
+          placeholder="Example: Contact via phone number or address: Del Mazo Street #34" aria-label="First Name">
+      </div>
+      <div class="">
+        <label for="phoneNumber">Phone number: </label>
+        <input type="text" class="form-control" id="phoneNumber" placeholder="Example: 5512345678"
+          aria-label="Phone Number">
+      </div>
+      <div class="">
+        <label for="zipCode">Zip Code: </label>
+        <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" aria-label="zip code">
+      </div>
+      <div class="">
+        <br>
+        <button type="submit" id="submitService" class="btn btn-info">Add Service</button>
+      </div>
+    </form>
   </div>
+</div>
 {{!-- Successful Toast --}}
 <div class="toast serviceSuccessful" role="alert" aria-live="assertive" id="serviceCreated" aria-atomic="true">
   <div class="toast-header">
-    <img src="https://www.benevablack.com/wp-content/uploads/2018/12/check-mark-green-tick-mark.png" style="width: 20px; height: 20px" class="rounded mr-2" alt="...">
+    <img src="https://www.benevablack.com/wp-content/uploads/2018/12/check-mark-green-tick-mark.png"
+      style="width: 20px; height: 20px" class="rounded mr-2" alt="...">
     <strong class="mr-auto">Success!</strong>
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -77,7 +71,8 @@
 {{!-- Unsuccessful Toast --}}
 <div class="toast serviceUnSuccessful" role="alert" aria-live="assertive" id="serviceNotCreated" aria-atomic="true">
   <div class="toast-header">
-    <img src="https://www.botlibre.biz/media/a532564-0.png" style="width: 20px; height: 20px" class="rounded mr-2" alt="...">
+    <img src="https://www.botlibre.biz/media/a532564-0.png" style="width: 20px; height: 20px" class="rounded mr-2"
+      alt="...">
     <strong class="mr-auto">Fail!</strong>
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
       <span aria-hidden="true">&times;</span>
