@@ -9,8 +9,8 @@ $(document).ready(function() { //File to render the selected person
     }
   
     function showPosition(position) {
-        var lat = 19.379093 /*19.3689777 position.coords.latitude*/;
-        var long = -99.246689  /*-99.25935699999999 position.coords.longitude*/;
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
         console.log(lat, long);
         var url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + long + "&key=AIzaSyBcaAnYXn42whS3AAvvwoCkjsE4pbdihwU";
         console.log(url);
