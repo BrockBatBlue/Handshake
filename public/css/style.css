@@ -280,4 +280,12 @@
  p {
    font-family: 'Lato', sans-serif;
  }
-  
+ /* Toasts  */
+ .reviewSuccessful, .reviewUnSuccessful {
+   margin-left: 20%;
+   margin-bottom: 20%;
+ }
+ .serviceSuccessful, .serviceUnSuccessful {
+  margin-left: 20%;
+  margin-bottom: 30%;
+ }
