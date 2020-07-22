@@ -9,7 +9,7 @@ $(document).ready(function() { //File to render the selected service
             console.log("DATA",data);
             posts = data;
             console.log(posts);
-            if (!posts || posts.length === 0) {
+            if (posts.Services.length === 0) {
                 displayEmpty(categoryID);
             } else {
                 initializeRows(posts);
@@ -101,11 +101,7 @@ $(document).ready(function() { //File to render the selected service
 
     //Display this message if there is no persons offering this service.
     let displayEmpty = () => {
-        errorContainer.css('display','block');
-        let message =  $("<h2>");
-        message.css({"text-align": "center", "margin": "20px 0"});
-        message.text("No information for this service, wait for someone to offer it!");
-        errorContainer.append(message);
+        $("#noServices").css("display","block");
     }
 
 });
