@@ -277,7 +277,19 @@
     margin-left: 20%;
   }
 
-
+ p {
+   font-family: 'Lato', sans-serif;
+ }
+ /* Toasts  */
+ .reviewSuccessful, .reviewUnSuccessful {
+   margin-left: 20%;
+   margin-bottom: 20%;
+ }
+ .serviceSuccessful, .serviceUnSuccessful {
+  margin-left: 20%;
+  margin-bottom: 30%;
+ }
+/* reviews hbs page */
   .noReviews {
     background-color: rgb(250, 249, 249);
     margin: 10px auto;
@@ -307,4 +319,4 @@
     padding: 30px;
   }
  
-  
+
