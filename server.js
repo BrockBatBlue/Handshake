@@ -4,9 +4,14 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
+var compression = require("compression");
 var express = require("express");
 
 require("dotenv").config();
+
+var app = express()
+// compress all responses
+app.use(compression());
 
 // Sets up the Express App
 // =============================================================
