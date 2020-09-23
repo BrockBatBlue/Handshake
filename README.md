@@ -18,3 +18,7 @@ Project made with ❤ by the handshake team Alan, Emily, and Rodrigo
 ## Site Image
 
 ![Handshake Site](public/assets/handshakeHome.jpg)
+
+## Deployed Site
+
+https://handshake-service-app.herokuapp.com/
